@@ -92,8 +92,14 @@
             "tasks": [
                 {
                     "id":1, 
-                    "type": "", 
-                    "prompt":"",
+                    "type": "fill-table", 
+                    "prompt":"Fill in the permission sets and write the 3 digit octal number that represents the permission sets.",
+                    "table":[
+                        ["                 ","","Permissions","     ","           "],
+                        ["File or Directory","Owner"," Group","Other","Octal Value"],
+                        ["/etc/group       ","fill ","fill  ","fill ","fill       "],
+                        ["/etc/skel        ","fill ","fill  ","fill ","fill       "],
+                        ["/etc/motd        ","fill ","fill  ","fill ","fill       "]],
                     "answer":""
                 },
                 {
