@@ -1,0 +1,268 @@
+{
+    "labs": [
+        {
+            "name":"Simple Commands",
+            "tasks": [
+
+            ]
+        },
+        {
+            "name":"File Redirection and Pipes",
+            "tasks": [
+                {
+                    "id":1, 
+                    "type": "single-answer", 
+                    "prompt":"Type the who command and use redirection, a pipe or appending in order to see the output when using the sort command from a single command line entry.",
+                    "answer":"who | sort"
+                },
+                {
+                    "id":2, 
+                    "type": "", 
+                    "prompt":"What type of operation enables you to send the output of a command directly to a file?",
+                    "answer":"redirection"
+                },
+                {
+                    "id":3, 
+                    "type": "single_answer",
+                     "prompt":"Which operation allows you to send the output of a command to the bottom of a file (if that file already exists)?",
+                     "answer":"appending"
+                },
+                {
+                    "name":"Unix Meta-characters, Filenames and How to Use Man Pages",
+                    "tasks": [
+                        {
+                            "id":1, 
+                            "type": "single-answer", 
+                            "prompt":"From the command line list only file or directory names that begin with the letter 'b'.",
+                            "answer":"ls b*"
+                        },
+                        {
+                            "id":2, 
+                            "type": "single-answer", 
+                            "prompt":"From your home directory use the “?” metacharacter to find an file or directory that ends with 'eans'.",
+                            "answer":"ls ?eans"
+                        },
+                        {
+                            "id":3, 
+                            "type": "multi-choice", 
+                            "prompt":"If you issue the command ls ?* what is the result? Why do you think you get that result?",
+                            "answers":[
+                                "a. ",
+                                "b. You will see a recursive listing of everything in the directory and all subsequent subdirectories.",
+                                "c. "
+                            ],
+                            "answer":"b"
+                        },
+                        {
+                            "id":4, 
+                            "type": "multi-choice", 
+                            "prompt":"What special characters must be avoided when creating a file name?",
+                            "answers":[
+                                "a. / * & %",
+                                "b. ",
+                                "c. "
+                            ],
+                            "answer":"a"
+                        },
+                        {
+                            "id":5, 
+                            "type": "single-answer", 
+                            "prompt":"What command do you enter to obtain help on how to use a command?",
+                            "answer":"man"
+                        },
+                        {
+                            "id":6, 
+                            "type": "multi-choice", 
+                            "prompt":"What does the whatis command do?",
+                            "answers":["a. ", "b. ", "c. It gives a one-line description of the command, but omits any information about options etc."],
+                            "answer":"c"
+                        },
+                        {
+                            "id":7, 
+                            "type": "single-answer", 
+                            "prompt":"What command can you enter to find the name of the command if you aren’t sure of the exact name?",
+                            "answer":"apropos"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"Security",
+            "tasks": [
+                {
+                    "id":1, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":2, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":3, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":4, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":5, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":6, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":7, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":8, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":9, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":10, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":11, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":12, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                }
+            ]
+        },
+        {
+            "name":"Other useful UNIX commands",
+            "tasks": [
+                {
+                    "id":1, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":2, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":3, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":4, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":5, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":6, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":7, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":8, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                }
+            ]
+        },
+        {
+            "name":"Variables",
+            "tasks": [
+                {
+                    "id":1, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":2, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":3, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":4, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":5, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":6, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                },
+                {
+                    "id":7, 
+                    "type": "", 
+                    "prompt":"",
+                    "answer":""
+                }
+            ]
+        }
+    ]
+}
