@@ -1,272 +1,378 @@
 {
     "labs": [
         {
-            "name":"Simple Commands",
-            "tasks": [
-
-            ]
-        },
-        {
-            "name":"File Redirection and Pipes",
+            "name": "Simple File Commands",
             "tasks": [
                 {
-                    "id":1, 
-                    "type": "single-answer", 
-                    "prompt":"Type the who command and use redirection, a pipe or appending in order to see the output when using the sort command from a single command line entry.",
-                    "answer":"who | sort"
+                    "id": 1,
+                    "type": "single-answer",
+                    "prompt": "Display your current working directory.",
+                    "answer": "pwd"
                 },
                 {
-                    "id":2, 
-                    "type": "", 
-                    "prompt":"What type of operation enables you to send the output of a command directly to a file?",
-                    "answer":"redirection"
+                    "id": 2,
+                    "type": "single-answer",
+                    "prompt": "Change to your home directory.",
+                    "answer": "cd ~"
                 },
                 {
-                    "id":3, 
-                    "type": "single_answer",
-                     "prompt":"Which operation allows you to send the output of a command to the bottom of a file (if that file already exists)?",
-                     "answer":"appending"
+                    "id": 3,
+                    "type": "single-answer",
+                    "prompt": "Display the contents of your current directory.",
+                    "answer": "ls"
                 },
                 {
-                    "name":"Unix Meta-characters, Filenames and How to Use Man Pages",
-                    "tasks": [
-                        {
-                            "id":1, 
-                            "type": "single-answer", 
-                            "prompt":"From the command line list only file or directory names that begin with the letter 'b'.",
-                            "answer":"ls b*"
-                        },
-                        {
-                            "id":2, 
-                            "type": "single-answer", 
-                            "prompt":"From your home directory use the “?” metacharacter to find an file or directory that ends with 'eans'.",
-                            "answer":"ls ?eans"
-                        },
-                        {
-                            "id":3, 
-                            "type": "multi-choice", 
-                            "prompt":"If you issue the command ls ?* what is the result? Why do you think you get that result?",
-                            "answers":[
-                                "a. ",
-                                "b. You will see a recursive listing of everything in the directory and all subsequent subdirectories.",
-                                "c. "
-                            ],
-                            "answer":"b"
-                        },
-                        {
-                            "id":4, 
-                            "type": "multi-choice", 
-                            "prompt":"What special characters must be avoided when creating a file name?",
-                            "answers":[
-                                "a. / * & %",
-                                "b. ",
-                                "c. "
-                            ],
-                            "answer":"a"
-                        },
-                        {
-                            "id":5, 
-                            "type": "single-answer", 
-                            "prompt":"What command do you enter to obtain help on how to use a command?",
-                            "answer":"man"
-                        },
-                        {
-                            "id":6, 
-                            "type": "multi-choice", 
-                            "prompt":"What does the whatis command do?",
-                            "answers":["a. ", "b. ", "c. It gives a one-line description of the command, but omits any information about options etc."],
-                            "answer":"c"
-                        },
-                        {
-                            "id":7, 
-                            "type": "single-answer", 
-                            "prompt":"What command can you enter to find the name of the command if you aren’t sure of the exact name?",
-                            "answer":"apropos"
-                        }
+                    "id": 4,
+                    "type": "single-answer",
+                    "prompt": "Display all files including hidden directories.",
+                    "answer": "ls -a"
+                },
+                {
+                    "id": 5,
+                    "type": "single-answer",
+                    "prompt": "Display a long list of the contents of the current working directory.",
+                    "answer": "ls -l"
+                },
+                {
+                    "id": 6,
+                    "type": "single-answer",
+                    "prompt": "Display the file types of the current working directory.",
+                    "answer": "ls -F"
+                },
+                {
+                    "id": 7,
+                    "type": "single-answer",
+                    "prompt": "Return to your home directory.",
+                    "answer": "cd ~"
+                },
+                {
+                    "id": 8,
+                    "type": "single-answer",
+                    "prompt": "Display the contents of the '/etc/default/keyboard' file.",
+                    "answer": "cat /etc/default/keyboard"
+                },
+                {
+                    "id": 9,
+                    "type": "multi-choice",
+                    "prompt": "Under what circumstance must you refrain from using the cat command to view the contents of a file?",
+                    "answers": [
+                        "a. Never, you can always use cat.",
+                        "b. You cannot cat executable files.",
+                        "c. You cannot cat json files."
+                    ],
+                    "answer": "b"
+                },
+                {
+                    "id": 10,
+                    "type": "multi-answer",
+                    "prompt": "Display the contents of the '/etc/default/keyboard' file and the '/etc/default/cron file",
+                    "answers": [
+                        "cat /etc/default/keyboard / /etc/default/cron",
+                        "more /etc/default/keyboard /etc/default/cron"
                     ]
+                },
+                {
+                    "id": 11,
+                    "type": "single-answer",
+                    "prompt": "Display the contents of the '/etc/default/keyboard' file and the '/etc/default/cron' file using a single command.",
+                    "answer": "more /etc/default/keyboard /etc/default/cron"
+                },
+                {
+                    "id": 12,
+                    "type": "multi-choice",
+                    "prompt": "What does the symbol '~' represent?",
+                    "answers": [
+                        "a. It is a shortcut for the users home directory.",
+                        "b. It doesn't have anything to do with linux.",
+                        "c. It is a shortcut for the root directory."
+                    ],
+                    "answer": "a"
+                },
+                {
+                    "id": 13,
+                    "type": "multi-choice",
+                    "prompt": "Complete the missing options to the mv command and their descriptions below:\n\n -i \n",
+                    "answers": [
+                        "a. Ignore mode - ignores system advice.",
+                        "b. Interactive mode - helps to prevent accidental overwriting.",
+                        "c. Invalid option for mv."
+                    ],
+                    "answer": "b"
+                },
+                {
+                    "id": 14,
+                    "type": "multi-choice",
+                    "prompt": "\n -r \n",
+                    "answers": [
+                        "a. Removes redundant files at new location.",
+                        "b. Invalid option for mv.",
+                        "c. Includes the content of a directory, including the contents of all subdirectories when you copy a directory."
+                    ],
+                    "answer": "c"
                 }
             ]
         },
         {
-            "name":"Security",
+            "name": "File Redirection and Pipes",
             "tasks": [
                 {
-                    "id":1, 
-                    "type": "fill-table", 
-                    "prompt":"Fill in the permission sets and write the 3 digit octal number that represents the permission sets.",
-                    "table":[
-                        ["                 ","","Permissions","     ","           "],
-                        ["File or Directory","Owner"," Group","Other","Octal Value"],
-                        ["/etc/group       ","fill ","fill  ","fill ","fill       "],
-                        ["/etc/skel        ","fill ","fill  ","fill ","fill       "],
-                        ["/etc/motd        ","fill ","fill  ","fill ","fill       "]],
-                    "answer":""
+                    "id": 1,
+                    "type": "single-answer",
+                    "prompt": "Type the who command and use redirection, a pipe or appending in order to see the output when using the sort command from a single command line entry.",
+                    "answer": "who | sort"
                 },
                 {
-                    "id":2, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 2,
+                    "type": "single-answer",
+                    "prompt": "What type of operation enables you to send the output of a command directly to a file?",
+                    "answer": "redirection"
                 },
                 {
-                    "id":3, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":4, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":5, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":6, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":7, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":8, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":9, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":10, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":11, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":12, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 3,
+                    "type": "single_answer",
+                    "prompt": "Which operation allows you to send the output of a command to the bottom of a file (if that file already exists)?",
+                    "answer": "appending"
                 }
             ]
         },
         {
-            "name":"Other useful UNIX commands",
+            "name": "Unix Meta-characters, Filenames and How to Use Man Pages",
             "tasks": [
                 {
-                    "id":1, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 1,
+                    "type": "single-answer",
+                    "prompt": "From the command line list only file or directory names that begin with the letter 'b'.",
+                    "answer": "ls b*"
                 },
                 {
-                    "id":2, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 2,
+                    "type": "single-answer",
+                    "prompt": "From your home directory use the “?” metacharacter to find an file or directory that ends with 'eans'.",
+                    "answer": "ls ?eans"
                 },
                 {
-                    "id":3, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 3,
+                    "type": "multi-choice",
+                    "prompt": "If you issue the command ls ?* what is the result? Why do you think you get that result?",
+                    "answers": [
+                        "a. ",
+                        "b. You will see a recursive listing of everything in the directory and all subsequent subdirectories.",
+                        "c. "
+                    ],
+                    "answer": "b"
                 },
                 {
-                    "id":4, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 4,
+                    "type": "multi-choice",
+                    "prompt": "What special characters must be avoided when creating a file name?",
+                    "answers": [
+                        "a. / * & %",
+                        "b. ",
+                        "c. "
+                    ],
+                    "answer": "a"
                 },
                 {
-                    "id":5, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 5,
+                    "type": "single-answer",
+                    "prompt": "What command do you enter to obtain help on how to use a command?",
+                    "answer": "man"
                 },
                 {
-                    "id":6, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 6,
+                    "type": "multi-choice",
+                    "prompt": "What does the whatis command do?",
+                    "answers": [
+                        "a. ",
+                        "b. ",
+                        "c. It gives a one-line description of the command, but omits any information about options etc."
+                    ],
+                    "answer": "c"
                 },
                 {
-                    "id":7, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
-                },
-                {
-                    "id":8, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 7,
+                    "type": "single-answer",
+                    "prompt": "What command can you enter to find the name of the command if you aren’t sure of the exact name?",
+                    "answer": "apropos"
                 }
             ]
         },
         {
-            "name":"Variables",
+            "name": "Security",
             "tasks": [
                 {
-                    "id":1, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 1,
+                    "type": "table",
+                    "prompt": "Fill in the permission sets and write the 3 digit octal number that represents the permission sets in the format:",
+                    "format":"owner, group, other, octal-value",
+                    "values": ["group", "skel", "motd"],
+                    "answers": ["rw-, r--, r--, 644", "rwx, r-x, r-x, 755", "rwx, rwx, rwx, 777"]
                 },
                 {
-                    "id":2, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 2,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
                 },
                 {
-                    "id":3, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 3,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
                 },
                 {
-                    "id":4, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 4,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
                 },
                 {
-                    "id":5, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 5,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
                 },
                 {
-                    "id":6, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 6,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
                 },
                 {
-                    "id":7, 
-                    "type": "", 
-                    "prompt":"",
-                    "answer":""
+                    "id": 7,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 8,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 9,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 10,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 11,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 12,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "name": "Other useful UNIX commands",
+            "tasks": [
+                {
+                    "id": 1,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 2,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 3,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 4,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 5,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 6,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 7,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 8,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                }
+            ]
+        },
+        {
+            "name": "Variables",
+            "tasks": [
+                {
+                    "id": 1,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 2,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 3,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 4,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 5,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 6,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
+                },
+                {
+                    "id": 7,
+                    "type": "",
+                    "prompt": "",
+                    "answer": ""
                 }
             ]
         }
