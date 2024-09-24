@@ -1,6 +1,6 @@
 import json
 
-with open('linux_data.json') as file:
+with open('linux_data.json','r', encoding='latin-1') as file:
     data = json.load(file)
     labs = data['labs']
     def show_labs():
