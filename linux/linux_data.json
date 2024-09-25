@@ -210,39 +210,39 @@
                 },
                 {
                     "id": 2,
-                    "type": "",
-                    "prompt": "",
-                    "answer": ""
+                    "type": "single-answer",
+                    "prompt": "Create a new file and a new directory – what are the permissions?",
+                    "answer": "rw- r-- r--"
                 },
                 {
                     "id": 3,
-                    "type": "",
-                    "prompt": "",
-                    "answer": ""
+                    "type": "multi-choice",
+                    "prompt": "Distinguish between the symbolic and octal modes.",
+                    "answers": ["c. Symbolic uses symbols as seen above there are symbolic permissions rw- r—r—the octal equivalent is 644."]
                 },
                 {
                     "id": 4,
-                    "type": "",
-                    "prompt": "",
-                    "answer": ""
+                    "type": "single-answer",
+                    "prompt": "Using symbolic permissions add write permissions for the group to the /etc/skel file.",
+                    "answer": "chmod g+a /etc/skel"
                 },
                 {
                     "id": 5,
-                    "type": "",
-                    "prompt": "",
-                    "answer": ""
+                    "type": "single-answer",
+                    "prompt": "Using octal mode, change permissions on the motd file to –rwxrw----.",
+                    "answer": "chmod 740 /etc/motd"
                 },
                 {
                     "id": 6,
-                    "type": "",
-                    "prompt": "",
-                    "answer": ""
+                    "type": "single-answer",
+                    "prompt": "Using octal mode add write permissions for other on the file named group.",
+                    "answer": "chmod 646 /etc/group"
                 },
                 {
                     "id": 7,
-                    "type": "",
-                    "prompt": "",
-                    "answer": ""
+                    "type": "single-answer",
+                    "prompt": "Identify the UID and the GID for the group file. Which command did you use?",
+                    "answer": "ls –n motd"
                 },
                 {
                     "id": 8,

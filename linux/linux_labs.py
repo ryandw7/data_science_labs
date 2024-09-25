@@ -1,4 +1,74 @@
 import json
+ 
+def handle_single_answer_task(task):
+    user_input = input("")
+    correct_answer = task['answer']
+    if user_input == correct_answer:
+        return True
+    else:
+        return False
+    
+    
+def handle_multi_choice_task(task):
+    print(f"{task['id']}. {task['prompt']}")
+    for choice in task['answers']:
+        print('    ' + choice)
+    user_answer = input("\nYour answer: ")
+    answer = task['answer']
+    if user_answer == answer:
+        print('Nice Job!\n')
+        correct += 1
+    else:
+        print(f"Wrong answer :/\n The correct answer is: \n {answer}\n")
+        incorrect += 1
+
+
+def handle_table_task(task):
+    total_correct = 0
+    total_incorrect = 0
+    print(task['prompt'])
+    for i, item in enumerate(task['values']):
+        print(task["format"])
+        user_input = input(f"{item} ")
+        correct_answer = str(task['answers'][i]).strip()
+        print(task['answers'][i])
+        if user_input.strip() == correct_answer:
+            total_correct += 1
+            print('correct')
+        else:
+            print(correct_answer, user_input, type(correct_answer), type(user_input))
+            total_incorrect += 1
+    
+        if total_correct == 3:
+            print("Nice Job! 3 of 3 correct.")
+            return True
+        elif total_correct == 2:
+            print("2 of 3 correct.")
+            return False
+        elif total_correct == 1:
+            print("1 of 3 correct.")
+            return False
+        else:
+            print("0 of 3 correct.")
+            return False
+
+def handle_multi_answer_task(task):
+            print(f"{task['id']}. {task['prompt']}")
+            user_answer = input("Your answer: ")
+            correct_answers = task['answers']
+            if user_answer in correct_answers:
+                return True
+            else:
+                return False
+
+def handle_task(task, is_correct):
+    if is_correct:
+        print('good job')
+    else:
+        print('try again')
+    print(task['answer'])
+    print('=====================================================\n')
+
 
 with open('linux_data.json','r', encoding='latin-1') as file:
     data = json.load(file)
@@ -23,88 +93,20 @@ with open('linux_data.json','r', encoding='latin-1') as file:
 
     res_lab_input()
 
-    def handle_table_task(task):
-        total_correct = 0
-        total_incorrect = 0
-        print(task['prompt'])
-        for i, item in enumerate(task['values']):
-            print(task["format"])
-            user_input = input(f"{item} ")
-            correct_answer = str(task['answers'][i]).strip()
-            print(task['answers'][i])
-            if user_input.strip() == correct_answer:
-                total_correct += 1
-                print('correct')
-            else:
-                print(correct_answer, user_input, type(correct_answer), type(user_input))
-                total_incorrect += 1
-       
-        if total_correct == 3:
-            print("Nice Job! 3 of 3 correct.")
-            return True
-        elif total_correct == 2:
-            print("2 of 3 correct.")
-            return False
-        elif total_correct == 1:
-            print("1 of 3 correct.")
-            return False
-        else:
-            print("0 of 3 correct.")
-            return False
-    
-
-
     #Begin tasks after successfully determing lab
 
     tasks = lab['tasks']
     correct = 0
     incorrect = 0
+
     for task in tasks:
         if task['type'] == 'single-answer':
-                print(f"{task['id']}. {task['prompt']}")
-                user_answer = input("Your answer: ")
-                answer = task['answer']
-                if user_answer == answer:
-                    print('Nice Job!\n')
-                    correct += 1
-                else:
-                    print(f"Wrong answer :/\n The correct answer is: \n {answer}\n")
-                    incorrect += 1
-
-                print('=====================================================\n')
-
-        if task['type'] == 'multi-answer':
-            print(f"{task['id']}. {task['prompt']}")
-            user_answer = input("Your answer: ")
-            correct_answers = task['answers']
-            if user_answer in correct_answers:
-                print('Nice Job!\n')
+            print(task['prompt'])
+            if handle_task(task, handle_single_answer_task(task)):
                 correct += 1
-            else:
-                print(f"Wrong answer :/\n The correct answer is: \n {answer}\n")
-                incorrect += 1
-                print('=====================================================\n')
+        else:
+            incorrect += 1
 
-        if task['type'] == 'multi-choice':
-            print(f"{task['id']}. {task['prompt']}")
-            for choice in task['answers']:
-                print('    ' + choice)
-            user_answer = input("\nYour answer: ")
-            answer = task['answer']
-            if user_answer == answer:
-                print('Nice Job!\n')
-                correct += 1
-            else:
-                print(f"Wrong answer :/\n The correct answer is: \n {answer}\n")
-                incorrect += 1
-
-            print('=====================================================\n')
-        if task['type'] == 'table':
-            if handle_table_task(task) == True:
-                correct += 1
-            else:
-                incorrect += 1
-            print('=====================================================\n')
     total_tasks = len(tasks)
     total_correct = correct
     total_incorrect = incorrect
