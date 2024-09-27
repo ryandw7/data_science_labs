@@ -23,7 +23,7 @@ def handle_multi_choice_task(task):
 def handle_table_task(task):
     total_correct = 0
     total_incorrect = 0
-    print(f"{task["format"]}\n")
+    print(f"{task['format']}\n")
     for i, item in enumerate(task['values']):
         user_input = input(f"{item} ")
         correct_answer = str(task['answers'][i]).strip()
