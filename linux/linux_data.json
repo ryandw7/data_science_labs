@@ -168,8 +168,8 @@
                     "prompt": "What special characters must be avoided when creating a file name?",
                     "answers": [
                         "a. / * & %",
-                        "b. ",
-                        "c. "
+                        "b. @ # $ ^",
+                        "c. ! ? + ="
                     ],
                     "answer": "a"
                 },
@@ -184,8 +184,8 @@
                     "type": "multi-choice",
                     "prompt": "What does the whatis command do?",
                     "answers": [
-                        "a. ",
-                        "b. ",
+                        "a. It displays the full manual page for the command.",
+                        "b. It shows all the available options for a command.",
                         "c. It gives a one-line description of the command, but omits any information about options etc."
                     ],
                     "answer": "c"
@@ -261,7 +261,9 @@
                     "type": "multi-choice",
                     "prompt": "What does the ps command display?",
                     "answers": [
-                        "b. It gives you information about your processes, and their associated PID and status."
+                        "a. It lists all the files in the current directory.",
+                        "b. It gives you information about your processes, and their associated PID and status.",
+                        "c. It shows the disk usage of your file system."
                     ],
                     "answer": "b"
                 },
@@ -279,6 +281,8 @@
                     "type": "multi-choice",
                     "prompt": "What options to the kill command were discussed in the slide notes?",
                     "answers": [
+                        "a. -15 and -1.",
+                        "b. -HUP and -INT.",
                         "c. Default and -9."
                     ],
                     "answer": "c"
@@ -288,7 +292,9 @@
                     "type": "multi-choice",
                     "prompt": "What does -9 to the kill command represent? Is this the default option to the kill command? If this is not what is? What does this default option do?",
                     "answers": [
-                        "b. It is an absolute kill option. This is not the default option and it is meant to be used as an absolute last resort. -15 is the default. It sends a terminate signal to a process but this is a more graceful kill than a -9 kill."
+                        "a. It is a restart option for the kill command. -1 is the default, and it restarts the process.",
+                        "b. It is an absolute kill option. This is not the default option and it is meant to be used as an absolute last resort. -15 is the default. It sends a terminate signal to a process but this is a more graceful kill than a -9 kill.",
+                        "c. It pauses the process temporarily. -HUP is the default option."
                     ],
                     "answer": "b"
                 },
@@ -297,7 +303,9 @@
                     "type": "multi-choice",
                     "prompt": "How do you send a process to the background? What does this mean?",
                     "answers": [
-                        "a. You type control z, then at the prompt type bg."
+                        "a. You type control z, then at the prompt type bg.",
+                        "b. You type control c, then restart the process in the background.",
+                        "c. You type fg to force the process into the background."
                     ],
                     "answer": "a"
                 }
@@ -311,6 +319,8 @@
                     "type": "multi-choice",
                     "prompt": "What does the quota command do?",
                     "answers": [
+                        "a. It displays the number of running processes on the system.",
+                        "b. It shows the disk usage of the entire file system.",
                         "c. All students are allocated a certain amount of disk space on the file system for their personal files, usually about 100Mb."
                     ],
                     "answer": "c"
@@ -320,16 +330,20 @@
                     "type": "multi-choice",
                     "prompt": "What is the difference between the df and du commands?",
                     "answers": [
-                        "c. The df command reports on the space left on the file system. The du command outputs the number of kilobyes used by each subdirectory."
+                        "a. The df command shows the number of files, and the du command lists active processes.",
+                        "b. The df command outputs network usage, while the du command lists disk errors.",
+                        "c. The df command reports on the space left on the file system. The du command outputs the number of kilobytes used by each subdirectory."
                     ],
                     "answer": "c"
                 },
                 {
                     "id": 3,
                     "type": "multi-choice",
-                    "prompt": ". What does the gzip command do?",
+                    "prompt": "What does the gzip command do?",
                     "answers": [
-                        "This reduces the size of a file, thus freeing valuable disk space."
+                        "a. This reduces the size of a file, thus freeing valuable disk space.",
+                        "b. It removes all files from a directory.",
+                        "c. It duplicates a file with a different extension."
                     ],
                     "answer": "a"
                 },
@@ -338,16 +352,20 @@
                     "type": "multi-choice",
                     "prompt": "How does zcat differ from the normal compression commands?",
                     "answers": [
-                        "b. It will read gzipped files without needing to uncompress them first."
+                        "a. It compresses files to a larger size than the original.",
+                        "b. It will read gzipped files without needing to uncompress them first.",
+                        "c. It encrypts files during the compression process."
                     ],
                     "answer": "b"
                 },
                 {
                     "id": 5,
                     "type": "multi-choice",
-                    "prompt": "what does the file commands identify?",
+                    "prompt": "What does the file command identify?",
                     "answers": [
-                        "It classifies the named files according to the type of data they contain, for example ascii (text), pictures, compressed data, etc."
+                        "a. It classifies the named files according to the type of data they contain, for example ASCII (text), pictures, compressed data, etc.",
+                        "b. It changes the file permissions for the specified files.",
+                        "c. It renames files based on their content type."
                     ],
                     "answer": "a"
                 },
@@ -362,7 +380,9 @@
                     "type": "multi-choice",
                     "prompt": "Why is the diff command useful?",
                     "answers": [
-                        "a. Lines beginning with a < denotes file1, while lines beginning with a >denotes file2."
+                        "a. Lines beginning with a < denote file1, while lines beginning with a > denote file2.",
+                        "b. It merges two files into one combined document.",
+                        "c. It deletes duplicate lines from a text file."
                     ],
                     "answer": "a"
                 },
@@ -371,7 +391,9 @@
                     "type": "multi-choice",
                     "prompt": "How can you find all the different options to use with the find command?",
                     "answers": [
-                        "c. Execute the man command with the find argument"
+                        "a. Use the help command followed by find.",
+                        "b. Look at the find documentation on the official website.",
+                        "c. Execute the man command with the find argument."
                     ],
                     "answer": "c"
                 },
