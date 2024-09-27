@@ -62,15 +62,17 @@ def handle_task(task, is_correct):
         
     else:
         print('\nIncorrect.\n')
-        if task['type'] == 'table' or 'multi-answer':
+        answer_format = ''
+        if task['type'] == ('table' or 'multi-answer'):
             answer_format = 'answers'
-        else:
+        elif task['type'] == ('single-answer' or 'multi-choice'):
             answer_format = 'answer'
+            
         prompt_answer = input(f"Would you like to see the {answer_format}?\n Type 'y' for yes, or enter for no. ")
         if prompt_answer == 'y':
             if answer_format == 'answer':
-                print[f"\n{task['answer']}"]
-            else:
+                print(f"\n{task['answer']}")
+            elif answer_format == 'answers':
                 for i in task['answers']:
                     print(i)
               

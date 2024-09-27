@@ -1,3 +1,4 @@
+
 {
     "labs": [
         {
@@ -204,9 +205,17 @@
                     "id": 1,
                     "type": "table",
                     "prompt": "-rw-r--r-- 1 root root 984 Sep 25 15:56 /etc/group\ndrwxr-xr-x 2 root root 4096 Sep 16 20:39 /etc/skel\ndrwxrwxrwx 3 root root 984 Sep 25 15:56 /etc/motd\n\nFill in the permission sets and write the 3 digit octal number that represents the permission sets in the format:",
-                    "format":"owner group other octal-value",
-                    "values": ["group", "skel", "motd"],
-                    "answers": ["rw- r-- r-- 644", "rwx r-x r-x 755", "rwx rwx rwx 777"]
+                    "format": "owner group other octal-value",
+                    "values": [
+                        "group",
+                        "skel",
+                        "motd"
+                    ],
+                    "answers": [
+                        "rw- r-- r-- 644",
+                        "rwx r-x r-x 755",
+                        "rwx rwx rwx 777"
+                    ]
                 },
                 {
                     "id": 2,
@@ -218,7 +227,9 @@
                     "id": 3,
                     "type": "multi-choice",
                     "prompt": "Distinguish between the symbolic and octal modes.",
-                    "answers": ["c. Symbolic uses symbols as seen above there are symbolic permissions rw- r—r—the octal equivalent is 644."],
+                    "answers": [
+                        "c. Symbolic uses symbols as seen above there are symbolic permissions rw- r—r—the octal equivalent is 644."
+                    ],
                     "answer": "c"
                 },
                 {
@@ -249,35 +260,45 @@
                     "id": 8,
                     "type": "multi-choice",
                     "prompt": "What does the ps command display?",
-                    "answers": ["b. It gives you information about your processes, and their associated PID and status."],
+                    "answers": [
+                        "b. It gives you information about your processes, and their associated PID and status."
+                    ],
                     "answer": "b"
                 },
                 {
-                   "id": 9,
+                    "id": 9,
                     "type": "multi-choice",
                     "prompt": "What does the ps command display?",
-                    "answers": ["a. A process id."],
+                    "answers": [
+                        "a. A process id."
+                    ],
                     "answer": "a"
                 },
                 {
                     "id": 10,
                     "type": "multi-choice",
                     "prompt": "What options to the kill command were discussed in the slide notes?",
-                    "answers": ["c. Default and -9."],
+                    "answers": [
+                        "c. Default and -9."
+                    ],
                     "answer": "c"
                 },
                 {
                     "id": 11,
                     "type": "multi-choice",
                     "prompt": "What does -9 to the kill command represent? Is this the default option to the kill command? If this is not what is? What does this default option do?",
-                    "answers": ["b. It is an absolute kill option. This is not the default option and it is meant to be used as an absolute last resort. -15 is the default. It sends a terminate signal to a process but this is a more graceful kill than a -9 kill."],
+                    "answers": [
+                        "b. It is an absolute kill option. This is not the default option and it is meant to be used as an absolute last resort. -15 is the default. It sends a terminate signal to a process but this is a more graceful kill than a -9 kill."
+                    ],
                     "answer": "b"
                 },
                 {
                     "id": 12,
                     "type": "multi-choice",
                     "prompt": "How do you send a process to the background? What does this mean?",
-                    "answers": ["a. You type control z, then at the prompt type bg."],
+                    "answers": [
+                        "a. You type control z, then at the prompt type bg."
+                    ],
                     "answer": "a"
                 }
             ]
@@ -289,35 +310,45 @@
                     "id": 1,
                     "type": "multi-choice",
                     "prompt": "What does the quota command do?",
-                    "answers":["c. All students are allocated a certain amount of disk space on the file system for their personal files, usually about 100Mb."],
+                    "answers": [
+                        "c. All students are allocated a certain amount of disk space on the file system for their personal files, usually about 100Mb."
+                    ],
                     "answer": "c"
                 },
                 {
-                   "id": 2,
+                    "id": 2,
                     "type": "multi-choice",
                     "prompt": "What is the difference between the df and du commands?",
-                    "answers":["c. The df command reports on the space left on the file system. The du command outputs the number of kilobyes used by each subdirectory."],
+                    "answers": [
+                        "c. The df command reports on the space left on the file system. The du command outputs the number of kilobyes used by each subdirectory."
+                    ],
                     "answer": "c"
                 },
                 {
                     "id": 3,
                     "type": "multi-choice",
                     "prompt": ". What does the gzip command do?",
-                    "answers":["This reduces the size of a file, thus freeing valuable disk space."],
+                    "answers": [
+                        "This reduces the size of a file, thus freeing valuable disk space."
+                    ],
                     "answer": "a"
                 },
                 {
                     "id": 4,
                     "type": "multi-choice",
                     "prompt": "How does zcat differ from the normal compression commands?",
-                    "answers":["b. It will read gzipped files without needing to uncompress them first."],
+                    "answers": [
+                        "b. It will read gzipped files without needing to uncompress them first."
+                    ],
                     "answer": "b"
                 },
                 {
                     "id": 5,
                     "type": "multi-choice",
                     "prompt": "what does the file commands identify?",
-                    "answers":["It classifies the named files according to the type of data they contain, for example ascii (text), pictures, compressed data, etc."],
+                    "answers": [
+                        "It classifies the named files according to the type of data they contain, for example ascii (text), pictures, compressed data, etc."
+                    ],
                     "answer": "a"
                 },
                 {
@@ -330,14 +361,18 @@
                     "id": 7,
                     "type": "multi-choice",
                     "prompt": "Why is the diff command useful?",
-                    "answers":["a. Lines beginning with a < denotes file1, while lines beginning with a >denotes file2."],
+                    "answers": [
+                        "a. Lines beginning with a < denotes file1, while lines beginning with a >denotes file2."
+                    ],
                     "answer": "a"
                 },
                 {
                     "id": 8,
                     "type": "multi-choice",
                     "prompt": "How can you find all the different options to use with the find command?",
-                    "answers":["c. Execute the man command with the find argument"],
+                    "answers": [
+                        "c. Execute the man command with the find argument"
+                    ],
                     "answer": "c"
                 },
                 {
