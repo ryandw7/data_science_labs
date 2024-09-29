@@ -82,7 +82,21 @@ def handle_task(task, is_correct):
 
 
 
-with open('linux_data.json','r', encoding='latin-1') as file:
+print("Welcome! Choose a topic to get started\n")
+
+topics = ['Linux', 'Shell Scripting']
+
+for i in topics:
+    print(f"  {i}\n")
+selected_topic = input("Topic: ")
+
+doc = ''
+if selected_topic == 'Linux':
+    doc = './lab_data/linux_data.json'
+elif selected_topic == 'Shell Scripting':
+    doc = './lab_data/shell_scripting_data.json'
+
+with open(doc,'r', encoding='latin-1') as file:
     # Pull lab data from linux_data.json and returns list of labs
     data = json.load(file)
     labs = data['labs']
@@ -92,7 +106,7 @@ with open('linux_data.json','r', encoding='latin-1') as file:
     print("Here are the labs you can review:\n")
     show_labs()
 
-    lab_input = input("\nwhich would you like to review?\n\n")
+    lab_input = input("which would you like to review?\n\n")
     lab = ''
 
     for item in labs:
@@ -100,9 +114,9 @@ with open('linux_data.json','r', encoding='latin-1') as file:
             lab = item
     def res_lab_input():
         if lab:
-            print("Let's get started!\n")
+            print("\nLet's get started!\n")
         else:
-            print("Sorry, that's not an option!")
+            print("\nSorry, that's not an option!\n")
 
     res_lab_input()
 
