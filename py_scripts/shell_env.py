@@ -1,7 +1,7 @@
 import subprocess
 from pathlib import Path
 def shell_task_1():
-    print('Create a file called sport.bash\n 1. Make it executable\n 2. Accept two parameters: NAME and SPORT\n 3. Display any sentence to the console using those inputs')
+    print('Create a file called sport.bash\n  1. Make it executable\n  2. Accept two parameters: NAME and SPORT\n  3. Display any sentence to the console using those inputs')
     print('hit ctr+z to exit py, type fg once completed to check your work')
     user_input = input('')
     correct_count = 0

@@ -1,5 +1,5 @@
 import json
-def dsp_labs():
+def json_tasks(lab):
     #Functions to handle each task type
     #Returns true if correct, false if incorrect
     def handle_single_answer_task(task):
@@ -46,7 +46,6 @@ def dsp_labs():
             return False
 
     def handle_multi_answer_task(task):
-                print(f"{task['id']}. {task['prompt']}")
                 user_answer = input("Your answer: ")
                 correct_answers = task['answers']
                 if user_answer in correct_answers:
@@ -59,13 +58,13 @@ def dsp_labs():
     def handle_task(task, is_correct):
         if is_correct:
             print('\ngood job!\n')
-            
+            return True
         else:
             print('\nIncorrect.\n')
             answer_format = ''
-            if task['type'] == ('table' or 'multi-answer'):
+            if task['type'] == 'table' or task['type'] == 'multi-answer':
                 answer_format = 'answers'
-            elif task['type'] == ('single-answer' or 'multi-choice'):
+            elif task['type'] == 'single-answer' or task['type'] == 'multi-choice':
                 answer_format = 'answer'
                 
             prompt_answer = input(f"Would you like to see the {answer_format}?\n Type 'y' for yes, or enter for no. ")
@@ -74,86 +73,68 @@ def dsp_labs():
                     print(f"\n{task['answer']}")
                 elif answer_format == 'answers':
                     for i in task['answers']:
-                        print(i)
+                        print(f"\n{i}")
                   
                 continue_tasks = input("")
-            print('=====================================================\n')
+            return False    
 
 
+    def show_labs():
+        print("")
+        for item in lab:
+            print(f"   {item['name']}\n")
+        
+    show_labs()
 
+    lab_input = input("which would you like to review?\n")
+    selected_lab = ''
+    for item in lab:
+        if item['name'] == lab_input:
+            selected_lab = item
+    def res_lab_input():
+        if selected_lab:
+            print("\nLet's get started!\n")
+        else:
+            print("\nSorry, that's not an option!\n")
 
-    print("Welcome! Choose a topic to get started\n")
+    res_lab_input()
 
-    topics = ['Linux', 'Shell Scripting']
+    # Stores tasks in task variable and runs handle task through each task
+    
+    correct = 0
+    incorrect = 0
 
-    for i in topics:
-        print(f"  {i}\n")
-    selected_topic = input("Topic: ")
+    for task in selected_lab['tasks']:
 
-    doc = ''
-    if selected_topic == 'Linux':
-        doc = './lab_data/linux_data.json'
-    elif selected_topic == 'Shell Scripting':
-        doc = './lab_data/shell_scripting_data.json'
-
-    with open(doc,'r', encoding='latin-1') as file:
-        # Pull lab data from linux_data.json and returns list of labs
-        data = json.load(file)
-        labs = data['labs']
-        def show_labs():
-            for item in labs:
-                print(f"   {item['name']}\n")
-        print("Here are the labs you can review:\n")
-        show_labs()
-
-        lab_input = input("which would you like to review?\n\n")
-        lab = ''
-
-        for item in labs:
-            if item['name'] == lab_input:
-                lab = item
-        def res_lab_input():
-            if lab:
-                print("\nLet's get started!\n")
+        print(f"{task['prompt']}\n")
+        if task['type'] == 'single-answer':
+            if handle_task(task, handle_single_answer_task(task)):
+                correct += 1
             else:
-                print("\nSorry, that's not an option!\n")
-
-        res_lab_input()
-
-        # Stores tasks in task variable and runs handle task through each task
-        tasks = lab['tasks']
-        correct = 0
-        incorrect = 0
-
-        for task in tasks:
-            print(f"{task['prompt']}\n")
-            if task['type'] == 'single-answer':
-                if handle_task(task, handle_single_answer_task(task)):
-                    correct += 1
-                else:
-                    incorrect += 1
-            elif task['type'] == 'multi-choice':
-                if handle_task(task, handle_multi_choice_task(task)):
-                    correct += 1
-                else:
-                    incorrect += 1
-            elif task['type'] == 'multi-answer':
-                if handle_task(task, handle_multi_answer_task(task)):
-                    correct += 1
-                else:
-                    incorrect += 1
-            elif task['type'] == 'table':
-                if handle_task(task, handle_table_task(task)):
-                    correct += 1
-                else:
-                    incorrect += 1
+                incorrect += 1
+        elif task['type'] == 'multi-choice':
+            if handle_task(task, handle_multi_choice_task(task)):
+                correct += 1
+            else:
+                incorrect += 1
+        elif task['type'] == 'multi-answer':
+            if handle_task(task, handle_multi_answer_task(task)):
+                correct += 1
+            else:
+                incorrect += 1
+        elif task['type'] == 'table':
+            if handle_task(task, handle_table_task(task)):
+                correct += 1
+            else:
+                incorrect += 1
+        print("============================================")
         # after loop, prints results
-        total_tasks = len(tasks)
+        total_tasks = len(selected_lab)
         total_correct = correct
         total_incorrect = incorrect
         percent_correct = round(total_correct / total_tasks * 100, 2)
 
-        print(f"""
+    print(f"""
         Total Tasks: {total_tasks}\n
         Total Correct: {total_correct}\n
         Total Incorrect: {total_incorrect}\n

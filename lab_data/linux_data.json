@@ -130,7 +130,7 @@
                 },
                 {
                     "id": 3,
-                    "type": "single_answer",
+                    "type": "single-answer",
                     "prompt": "Which operation allows you to send the output of a command to the bottom of a file (if that file already exists)?",
                     "answer": "appending"
                 }
@@ -223,15 +223,17 @@
                     "prompt": "Create a new file and a new directory – what are the permissions?",
                     "answer": "rw- r-- r--"
                 },
-                {
-                    "id": 3,
-                    "type": "multi-choice",
-                    "prompt": "Distinguish between the symbolic and octal modes.",
-                    "answers": [
-                        "c. Symbolic uses symbols as seen above there are symbolic permissions rw- r—r—the octal equivalent is 644."
-                    ],
-                    "answer": "c"
-                },
+		{
+		    "id": 3,
+		    "type": "multi-choice",
+		    "prompt": "Distinguish between the symbolic and octal modes.",
+		    "answers": [
+			    "a. Symbolic mode uses numeric values, while octal mode uses symbols like rwx.",
+			    "b. Symbolic mode is only used for directories, and octal mode is used for files.",
+			    "c. Symbolic uses symbols as seen above—there are symbolic permissions rw- r--r--. The octal equivalent is 644."
+	            ],
+	    	    "answer": "c"
+		},
                 {
                     "id": 4,
                     "type": "single-answer",
@@ -267,15 +269,17 @@
                     ],
                     "answer": "b"
                 },
-                {
-                    "id": 9,
-                    "type": "multi-choice",
-                    "prompt": "What does the ps command display?",
-                    "answers": [
-                        "a. A process id."
-                    ],
-                    "answer": "a"
-                },
+		{
+		    "id": 9,
+	            "type": "multi-choice",
+	            "prompt": "What does the ps command display?",
+	            "answers": [
+			    "a. A process ID.",
+			    "b. The current memory usage of the system.",
+			    "c. The list of open files on the system."
+		    ],
+		    "answer": "a"
+		},
                 {
                     "id": 10,
                     "type": "multi-choice",
@@ -442,7 +446,7 @@
                     "answers": [
                         "a. A shell variable is only accessible during the login session, while an environment variable can be accessed only after the system reboots.",
                         "b. Shell variables store user inputs, while environment variables store system commands.",
-                        "c. A shell variable is local to the shell it’s assigned in. An environment variable has visibility into the value stored in that variable for subshell instances."
+                        "c. A shell variable is local to the shell it is assigned in. An environment variable has visibility into the value stored in that variable for subshell instances."
                     ],
                     "answer": "c"
                 },
