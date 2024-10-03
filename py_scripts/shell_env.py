@@ -36,9 +36,11 @@ def shell_task_1():
             print("The sport input isn't working correctly")
 
         if correct_count == 5:
+            return True
             print("nice job!")
     else:
         print('sport.bash could not be found.\n try using "vi sport.bash"')
+        return False
 
 def shell_task_2():
     correct = 0
@@ -48,8 +50,34 @@ def shell_task_2():
     bash_file = Path('./counter.bash')
     if bash_file.is_file():
         correct += 1
-    subprocess.run(["chmod","+x","sport.bash"])
-    result = subprocess.run(["./counter.bash", 5], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    
-    print(correct)
+    else:
+        print("Can't find file: counter.bash")
+    subprocess.run(["chmod","+rwx","counter.bash"])
+    result = subprocess.run(["./counter.bash", "5"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True).stdout
+    cat_bash = str(subprocess.run(["cat", "counter.bash"], stdout=subprocess.PIPE).stdout)
+
+    if "COUNT=1" in cat_bash:
+        correct += 1
+    else:
+        print("Count variable missing. Try inserting 'COUNT=1' to counter.bash")
+    if "END=$1" in cat_bash:
+        correct += 1
+    else:
+        print("End paramater missing. Try inserting 'END=$1' to counter.bash")
+    conditions = ["1" in result, "2" in result, "3" in result, "4" in result, "5" in result]
+    if all(conditions):
+        correct += 1
+    else:
+        print('The value of COUNT is not being displayed. Try inserting >> echo "COUNT " = $COUNT << into counter.bash.')
+    if "loop finished" in result.lower():
+        correct += 1
+    else:
+        print(" stdout 'Loop Finished' was not found. Try inserting >> echo 'Loop Finished' << into counter.bash.")
+        print(result)
+    if correct == 5:
+        print("Nice Job!")
+        return True
+    else:
+        print("sorry :/")
+        return False
 shell_task_2()
