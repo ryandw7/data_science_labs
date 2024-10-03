@@ -40,3 +40,16 @@ def shell_task_1():
     else:
         print('sport.bash could not be found.\n try using "vi sport.bash"')
 
+def shell_task_2():
+    correct = 0
+    print("Write a script called counter.bash\n   A. It should count from 1 to the number entered by the user\n   B. Through the loop, display the current count value\n   C. Once the loop terminates, display “Loop Finished”")
+    print("\nhit ctr+z to exit py, type fg once completed to check your work")
+    block = input("")
+    bash_file = Path('./counter.bash')
+    if bash_file.is_file():
+        correct += 1
+    subprocess.run(["chmod","+x","sport.bash"])
+    result = subprocess.run(["./counter.bash", 5], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    
+    print(correct)
+shell_task_2()
