@@ -11,8 +11,7 @@ for i in topics:
 user_input = input("\nTopic: ")
 
 if user_input == "Shell Scripting":
-    while shell_task_1() == False:
-        shell_task_1()
+    shell_task_1()
 elif user_input == "Linux":
     with open('./lab_data/linux_data.json', 'r', encoding="latin-1") as labs:
         data = json.load(labs)
