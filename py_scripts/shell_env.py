@@ -29,6 +29,7 @@ def shell_task_1():
 
         bash_file = Path("./sport.bash")
         if bash_file.is_file():
+            subprocess.run(["chmod", "+rwx", "sport.bash"])
             correct_count += 1
             cat_bash = str(subprocess.run(["cat","./sport.bash"], stdout=subprocess.PIPE).stdout)
             
