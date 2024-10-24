@@ -1,0 +1,40 @@
+{
+    "Linux": [
+        {
+            "topic": "Simple File Commands",
+            "total": 14,
+            "best": 12
+        },
+        {
+            "topic": "File Redirection and Pipes",
+            "total": 3,
+            "best": 0
+        },
+        {
+            "topic": "Unix Meta-characters",
+            "total": 7,
+            "best": 0
+        },
+        {
+            "topic": "Security",
+            "total": 11,
+            "best": 0
+        },
+        {
+            "topic": "Other useful UNIX commands",
+            "total": 8,
+            "best": 0
+        },
+        {
+            "topic": "Variables",
+            "total": 7,
+            "best": 0
+        }
+    ],
+    "Shell Scripting": [
+        {}
+    ],
+    "Python": [],
+    "Statistics": [],
+    "R": []
+}
