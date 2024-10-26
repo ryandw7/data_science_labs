@@ -36,7 +36,6 @@ def write_score(topic, subtopic, score):
     
     with open("./lab_data/user_scores.json", "r") as f:
         data = json.load(f)
-        
         parent = data[f"{topic}"]
         for i in range(len(parent)):
             if parent[i]["topic"] == subtopic:
@@ -51,4 +50,3 @@ def write_score(topic, subtopic, score):
     
     
 
-write_score("Linux", "Simple File Commands", 10)

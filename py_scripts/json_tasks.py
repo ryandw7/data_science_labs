@@ -1,7 +1,12 @@
 import json
-def json_tasks(lab):
+import sys
+sys.path.append('../')
+from utils import *
+
+def json_tasks(lab, topic):
     #Functions to handle each task type
     #Returns true if correct, false if incorrect
+    
     def handle_single_answer_task(task):
         user_input = input("")
         correct_answer = task['answer']
@@ -103,7 +108,7 @@ def json_tasks(lab):
     
     correct = 0
     incorrect = 0
-
+    subtopic = selected_lab['name']
     for task in selected_lab['tasks']:
 
         print(f"{task['prompt']}\n")
@@ -133,7 +138,8 @@ def json_tasks(lab):
         total_correct = correct
         total_incorrect = incorrect
         percent_correct = round(total_correct / total_tasks * 100, 2)
-
+        
+        write_score(topic, subtopic, total_correct)
     print(f"""
         Total Tasks: {total_tasks}\n
         Total Correct: {total_correct}\n
