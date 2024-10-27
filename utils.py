@@ -26,12 +26,10 @@ def read_score(topic, subtopic):
                     best = i["best"]           
         else:
             return data['target']['best']
-        print(best)
         return best
 
 def write_score(topic, subtopic, score):
     current_best = read_score(topic, subtopic)
-    print(score > current_best)
     data = ""
     
     with open("./lab_data/user_scores.json", "r") as f:
