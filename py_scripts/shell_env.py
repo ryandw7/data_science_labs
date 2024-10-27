@@ -1,7 +1,8 @@
 import subprocess
 from pathlib import Path
-import time
-
+import sys
+sys.path.append("../")
+from utils import *
 general_guide = "hit ctr+z to exit py, type fg once completed to check your work"
          
 task1_instructions = "Create a file called sport.bash\n  1. Make it executable\n  2. Accept two parameters: NAME and SPORT\n  3. Display any sentence to the console using those inputs"
@@ -65,7 +66,7 @@ def shell_task_1():
         else:
             print('sport.bash could not be found.\n try using "vi sport.bash"')
         if correct_count == 6:
-
+            mark_completed("Shell Scripting", "Favorite Sport")
             print("nice job!")
 
             correct_block = input("\nPress any key to continue\n")
@@ -74,6 +75,7 @@ def shell_task_1():
         else:
 
             if handle_incorrect() == True:
+                
                 done = True
 
 
@@ -128,6 +130,7 @@ def shell_task_2():
 
         if correct == 6:
             print("Nice job!")
+            mark_completed("Shell Scripting", "Favorite Sport")
             correct_block = input("\nPress any key to continue\n")
             done = True
         else:

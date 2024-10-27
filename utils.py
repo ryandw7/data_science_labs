@@ -46,5 +46,27 @@ def write_score(topic, subtopic, score):
                 else:
                     f.close()
     
-    
+
+def read_score_wrapper(read_function, *args, **kwargs):
+    with open('./lab_data/user_scores.json', 'r') as f:
+        data = json.load(f)
+        read_function(data)
+        f.close()
+        
+def write_score_wrapper(write_function, *args, **kwargs):
+    with open('./lab_data/user_scores.json', 'w') as f:
+        write_function(f, *args, **kwargs)
+        f.close()
+
+def mark_completed(topic, subtopic):
+    data = ""
+    with open('./lab_data/user_scores.json', 'r') as f:
+        data = json.load(f)
+        
+        for i in range(len(data[f"{topic}"])):
+            if data[f"{topic}"][i]["topic"] == subtopic:
+                data[f"{topic}"][i]["status"] = "Completed"
+                f.close()
+                with open('./lab_data/user_scores.json', 'w') as f:
+                    json.dump(data, f, indent=4)
 
