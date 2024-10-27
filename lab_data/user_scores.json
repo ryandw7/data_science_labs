@@ -34,11 +34,11 @@
     "Shell Scripting": [
         {
             "topic": "Favorite Sport",
-            "status": "Completed"
+            "status": "Not Completed"
         },
         {
             "topic": "Bash Counter",
-            "status": "Completed"
+            "status": "Not Completed"
         }
     ],
     "Python": [],
