@@ -1,7 +1,8 @@
-import time
+import os
 import json
 
 def read_all_scores():
+    os.system("clear")
     with open('./lab_data/user_scores.json', 'r', encoding="latin-1") as f:
         data = json.load(f)
         for x in data:
@@ -14,6 +15,7 @@ def read_all_scores():
                         print(f"\n  {value}")
                     else:
                         print(f"    {key}: {value}")
+    blocker = input("")
                     
 
 def read_score(topic, subtopic):

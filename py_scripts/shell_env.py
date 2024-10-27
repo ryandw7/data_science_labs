@@ -3,24 +3,29 @@ from pathlib import Path
 import sys
 sys.path.append("../")
 from utils import *
+import os
+
 general_guide = "hit ctr+z to exit py, type fg once completed to check your work"
          
 task1_instructions = "Create a file called sport.bash\n  1. Make it executable\n  2. Accept two parameters: NAME and SPORT\n  3. Display any sentence to the console using those inputs"
 
 task2_instructions = "Write a script called counter.bash\n   A. It should count from 1 to the number entered by the user\n   B. Through the loop, display the current count value\n   C. Once the loop terminates, display “Loop Finished"
 
-def handle_incorrect():
+def handle_incorrect(task):
     print("q - back to menu\nn - move on\nany other key - check work again")
     nav_input = input("")
     if nav_input == "n":
         return True
+    else:
+        return task()
 
 def instruct(task_instructions):
     print(f"{task_instructions}\n\n{general_guide}")
     block = input("")
 
 def shell_task_1():
-
+    os.system("clear")
+    print("SHELL SCRIPTING LABS\n")
     instruct(task1_instructions)
 
     done = False
@@ -74,13 +79,14 @@ def shell_task_1():
 
         else:
 
-            if handle_incorrect() == True:
+            if handle_incorrect(shell_task_1) == True:
                 
                 done = True
 
 
 def shell_task_2():
-
+    os.system("clear")
+    print("SHELL SCRIPTING LABS\n")
     instruct(task2_instructions)
     
     correct = 0
@@ -134,5 +140,5 @@ def shell_task_2():
             correct_block = input("\nPress any key to continue\n")
             done = True
         else:
-            if handle_incorrect() == True:
+            if handle_incorrect(shell_task_2) == True:
                 done = True

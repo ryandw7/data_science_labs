@@ -1,9 +1,12 @@
 import json
 import sys
+import os
 sys.path.append('../')
 from utils import *
 
 def json_tasks(lab, topic):
+    os.system("clear")
+    print(f"{topic.upper()} LABS\n")
     #Functions to handle each task type
     #Returns true if correct, false if incorrect
     
@@ -85,7 +88,6 @@ def json_tasks(lab, topic):
 
 
     def show_labs():
-        print("")
         for item in lab:
             print(f"   {item['name']}\n")
         
@@ -146,4 +148,11 @@ def json_tasks(lab, topic):
         Total Incorrect: {total_incorrect}\n
         Percent Correct: {percent_correct}\n
         """)
+    print(f"Q - back to main menu\nR - more {topic} labs")
+    end_input = input("")
+
+    if end_input.lower == "q":
+        return
+    elif end_input.lower == "r":
+        return json_tasks(lab, topic)
 
