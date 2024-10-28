@@ -64,8 +64,10 @@ def json_tasks(lab, topic):
     # Function to be executed on each task
     # is_correct takes task handlers as argument
     def handle_task(task, is_correct):
+        
         if is_correct:
             print('\ngood job!\n')
+            input("Hit enter to continue")
             return True
         else:
             print('\nIncorrect.\n')
@@ -112,7 +114,7 @@ def json_tasks(lab, topic):
     incorrect = 0
     subtopic = selected_lab['name']
     for task in selected_lab['tasks']:
-
+        os.system("clear")
         print(f"{task['prompt']}\n")
         if task['type'] == 'single-answer':
             if handle_task(task, handle_single_answer_task(task)):
@@ -136,10 +138,10 @@ def json_tasks(lab, topic):
                 incorrect += 1
         print("============================================")
         # after loop, prints results
-        total_tasks = len(selected_lab)
+        total_tasks = len(selected_lab['tasks'])
         total_correct = correct
         total_incorrect = incorrect
-        percent_correct = round(total_correct / total_tasks * 100, 2)
+        percent_correct = round((total_correct / total_tasks) * 100)
         
         write_score(topic, subtopic, total_correct)
     print(f"""
