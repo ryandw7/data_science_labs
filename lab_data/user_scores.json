@@ -3,7 +3,7 @@
         {
             "topic": "Simple File Commands",
             "total": 14,
-            "best": 0
+            "best": 13
         },
         {
             "topic": "File Redirection and Pipes",
@@ -34,7 +34,7 @@
     "Shell Scripting": [
         {
             "topic": "Favorite Sport",
-            "status": "Not Completed"
+            "status": "Completed"
         },
         {
             "topic": "Bash Counter",

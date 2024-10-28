@@ -9,11 +9,13 @@ task1_instructions = "Create a file called sport.bash\n  1. Make it executable\n
 
 task2_instructions = "Write a script called counter.bash\n   A. It should count from 1 to the number entered by the user\n   B. Through the loop, display the current count value\n   C. Once the loop terminates, display “Loop Finished"
 
-def handle_incorrect():
+def handle_incorrect(task):
     print("q - back to menu\nn - move on\nany other key - check work again")
     nav_input = input("")
     if nav_input == "n":
         return True
+    else:
+        return task()
 
 def instruct(task_instructions):
     print(f"{task_instructions}\n\n{general_guide}")
@@ -26,57 +28,58 @@ def shell_task_1():
     done = False
     correct_count = 0
 
-    while done == False:
+    #while done == False:
 
-        bash_file = Path("./sport.bash")
-        if bash_file.is_file():
-            subprocess.run(["chmod", "+rwx", "sport.bash"])
+    bash_file = Path("./sport.bash")
+    if bash_file.is_file():
+        subprocess.run(["chmod", "+rwx", "sport.bash"])
+        correct_count += 1
+        cat_bash = str(subprocess.run(["cat","./sport.bash"], stdout=subprocess.PIPE).stdout)
+        
+        if "#!/bin/bash" in cat_bash:
             correct_count += 1
-            cat_bash = str(subprocess.run(["cat","./sport.bash"], stdout=subprocess.PIPE).stdout)
-            
-            if "#!/bin/bash" in cat_bash:
+
+            if "NAME=$" in cat_bash:
                 correct_count += 1
-
-                if "NAME=$" in cat_bash:
-                    correct_count += 1
-                else:
-                    print("Missing NAME input")
-                if "SPORT=$" in cat_bash:
-                    correct_count += 1
-                else:
-                    print("Missing SPORT input")
-
-                result = subprocess.run(["./sport.bash", "foo", "bar"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
-                if "foo" in result.stdout:
-                    correct_count += 1
-                else:
-                    print("The name input isn't working correctly, try again")
-                if "bar" in result.stdout:
-                    correct_count += 1
-                else:
-                    print("The sport input isn't working correctly")
-
-                if correct_count == 5:
-                    print("nice job!")
-                    done = True
-                    return True
             else:
-                print("Try inserting #!/bin/bash at the top of your bash file.")
-        else:
-            print('sport.bash could not be found.\n try using "vi sport.bash"')
-        if correct_count == 6:
-            mark_completed("Shell Scripting", "Favorite Sport")
-            print("nice job!")
+                print("Missing NAME input")
+            if "SPORT=$" in cat_bash:
+                correct_count += 1
+            else:
+                print("Missing SPORT input")
 
-            correct_block = input("\nPress any key to continue\n")
-            done = True
+            result = subprocess.run(["./sport.bash", "foo", "bar"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
-        else:
+            if "foo" in result.stdout:
+                correct_count += 1
+            else:
+                print("The name input isn't working correctly, try again")
+            if "bar" in result.stdout:
+                correct_count += 1
+            else:
+                print("The sport input isn't working correctly")
 
-            if handle_incorrect() == True:
-                
+            if correct_count == 5:
+                print("nice job!")
                 done = True
+                return True
+        else:
+            print("Try inserting #!/bin/bash at the top of your bash file.")
+    else:
+        print('sport.bash could not be found.\n try using "vi sport.bash"')
+    if correct_count == 6:
+        mark_completed("Shell Scripting", "Favorite Sport")
+        print("nice job!")
+            
+        correct_block = input("\nPress any key to continue\n")
+        done = True
+
+    else:
+
+        if handle_incorrect(shell_task_1) == True:
+            
+            done = True
+        
 
 
 def shell_task_2():

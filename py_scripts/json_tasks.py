@@ -134,10 +134,10 @@ def json_tasks(lab, topic):
                 incorrect += 1
         print("============================================")
         # after loop, prints results
-        total_tasks = len(selected_lab)
+        total_tasks = len(selected_lab["tasks"])
         total_correct = correct
         total_incorrect = incorrect
-        percent_correct = round(total_correct / total_tasks * 100, 2)
+        percent_correct = round(total_correct / total_tasks * 100)
         
         write_score(topic, subtopic, total_correct)
     print(f"""
