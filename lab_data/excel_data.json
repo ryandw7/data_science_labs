@@ -1,0 +1,48 @@
+{
+    "id": 7,
+    "has_children": true,
+    "labs": [
+        {
+            "id": "7_1",
+            "type": "single_answer",
+            "has_children": false,
+            "prompt": "",
+            "answer": ""
+        },
+        {
+            "id": "7_2",
+            "type": "single_answer",
+            "has_children": false,
+            "prompt": "",
+            "answer": ""
+        },
+        {
+            "id": "7_3",
+            "type": "single_answer",
+            "has_children": false,
+            "prompt": "",
+            "answer": ""
+        },
+        {
+            "id": "7_4",
+            "type": "single_answer",
+            "has_children": false,
+            "prompt": "",
+            "answer": ""
+        },
+        {
+            "id": "7_5",
+            "type": "single_answer",
+            "has_children": false,
+            "prompt": "",
+            "answer": ""
+        },
+        {
+            "id": "7_6",
+            "type": "single_answer",
+            "has_children": false,
+            "prompt": "",
+            "answer": ""
+        }
+    ]
+}

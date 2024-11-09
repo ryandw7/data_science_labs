@@ -1,0 +1,191 @@
+{
+    "type": "project",
+    "id": 3,
+    "labs": [
+        {
+            "id": "3_1",
+            "name": "Lab 1",
+            "sections": [
+                {
+                    "id": "3_1_1",
+                    "name": "Part 1",
+                    "tasks": [
+                        {
+                            "id": "3_1_1_1",
+                            "prompt": "Write Python code to get the Python version you are using.",
+                            "solution": "import sys\nprint(sys.executable)\nprint(sys.version)\nprint(sys.version_info)"
+                        },
+                        {
+                            "id": "3_1_1_2",
+                            "prompt": "Write Python code to display the current date.",
+                            "solution": "import datetime\nnow = datetime.datetime.now()\nprint(now.strftime('%Y-%m-%d %H:%M:%S'))"
+                        },
+                        {
+                            "id": "3_1_1_3",
+                            "prompt": "Write a Python program which accepts the internet usage in bytes and converts it into gigabytes.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_1_4",
+                            "prompt": "Write a Python program to accept a filename from the user and check the extension of the file.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_1_5",
+                            "prompt": "Write a Python program which accepts a sequence of comma-separated from a user and generate a list and a tuple with those numbers.",
+                            "solution": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "3_1_2",
+                    "name": "Part 2",
+                    "tasks": [
+                        {
+                            "id": "3_1_2_1",
+                            "prompt": "Write a Python program which accepts the product mix and prints the total number of products.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_2_2",
+                            "prompt": "Write a Python program that accepts an integer (n) and returns the absolute number.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_2_3",
+                            "prompt": "",
+                            "solution": "Write a Python program that accepts an integer (n) and computes the log, square root, and square of the number"
+                        },
+                        {
+                            "id": "3_1_2_4",
+                            "prompt": "Write a Python program that takes in a date and prints the month, day, and year separately.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_2_5",
+                            "prompt": "Write a Python program to calculate the number of days between two dates.",
+                            "solution": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "3_1_3",
+                    "name": "Part 3",
+                    "tasks": [
+                        {
+                            "id": "3_1_3_1",
+                            "prompt": "Write a Python program to Create a variable with your name",
+                            "sub_prompts": [
+                                "Output with whitespaces on each side of your name and between your first and last name. Display the result in lowercase.",
+                                "Print your name with whitespace stripped from both sides, but not between your first and last name. Display the result in uppercase."
+                            ],
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_3_2",
+                            "prompt": "Write a Python program to print out each and every value in a list using a for loop, then print out the total number of items in that list.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_3_3",
+                            "prompt": "Write a Python Program to get the max, sum, and min of a list of integers.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_3_4",
+                            "prompt": "Write a Python program to understand your Text Data",
+                            "sub_prompts": [
+                                "Store the following sentence in a variable: ‘I am learning Python. I will become an expert at Python.’",
+                                "Use the find() function to show where the word ‘Python’ first appears in the sentence.",
+                                "Use the rfind() function to show the last place the word ‘Python’ appears in the sentence.",
+                                "Use the count() to show how many times the word Python appears in your sentence.",
+                                "Use the split() function to break your sentence into a list of words.",
+                                "Use the replace() function to change Python to Ruby in your sentence."
+                            ],
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_3_5",
+                            "prompt": "Write a Python program to find out which customers have an active/inactive/unknown status from a list of 0, 1, and ‘NA’. 0 means inactive, 1 mean active, ‘NA’ means unknown status.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_3_6",
+                            "prompt": "Write a Python program that takes in a list of device types connected to a network and prints a string for each value in the format:\n No of mobile devices connected = 5\n No of tablet devices connected = 3\n No of TV devices connected = 0",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_3_7",
+                            "prompt": "Write a Python program that notifies customers when their data usage has reached 20 Gigabytes using a while loop to increment a variable ‘data_usage’ which starts at 5gb and goes up in increments of 5.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_1_3_8",
+                            "prompt": "Write a Python program that has a dictionary where the keys are names of the customers and values are the number of times they connected to the wifi in a day, then print out a string for each customer stating the number of times they connected to wifi.",
+                            "solution": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "3_2",
+            "name": "Lab 2",
+            "sections": [
+                {
+                    "id": "3_2_1",
+                    "name": "Part 1",
+                    "tasks": [
+                        {
+                            "id": "3_2_1_1",
+                            "prompt": "Write a Python program to develop a function that accepts a name as an argument then prints out a string like “{name} loves using the X1 remote!”",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_2_1_2",
+                            "prompt": "Write a function that takes in two arguments: state_name, city_name and an optional argument:  fav_sports_team. The function should print each value.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_2_1_3",
+                            "prompt": "Write a Python function to multiply all the numbers in a list.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_2_1_4",
+                            "prompt": "Look at the python code below and explain what it is doing.\n\ndef test(a)\n   def add(b):\n       nonlocal a\n        a += 1\n        return a+b\n    return add\nfunc = test(4)\nprint(func(4))",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_2_1_5",
+                            "prompt": "Write a python code to import a csv file and open it. Print the top 5 rows.",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_2_1_6",
+                            "prompt": "Export a csv file in your machine.",
+                            "solution": ""
+                        },
+                         {
+                            "id": "3_2_1_7",
+                            "prompt": "Write a python code to calculate the sum of the numbers from 1 to 100 using the lambda function. (hint- Use the range function range(1,101))",
+                            "solution": ""
+                        },
+                        {
+                            "id": "3_2_1_8",
+                            "prompt": "Write a Python code to create a generator(given below) and we will use this generator to run the demographics dataset to identify customers in Denver. (The code below is not complete. Remember to use the next method to initiate the generator.",
+                            "sub_prompts":["\n def search(keyword, filename):\n     print('generator started')\n    f = open(filename, 'r')\n   # Looping through the file line by line\n   for line in f:\n        if keyword in line:\n           #if keyword found, return it\n          yield line\n    f.close()"],
+                            "solution": ""
+                        },
+                       
+                        {
+                            "id": "3_2_1_9",
+                            "prompt": "Write a Python program to create a generator that creates a Fibonacci series.",
+                            "solution": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "type": "project",
+    "id": 4,
+    "has_children": true,
+    "labs": [
+        {
+            "id": "4_1",
+            "prompt": "",
+            "solution": "",
+            "has_children": false
+        },
+        {
+            "id": "4_2",
+            "prompt": "",
+            "solution": "",
+            "has_children": false
+        },
+        {
+            "id": "4_3",
+            "prompt": "",
+            "solution": "",
+            "has_children": false
+        },
+        {
+            "id": "4_4",
+            "prompt": "",
+            "solution": "",
+            "has_children": true,
+            "children": [
+                {
+                    "id": "4_4_1",
+                    "prompt": "",
+                    "solution": ""
+                },
+                {
+                    "id": "4_4_2",
+                    "prompt": "",
+                    "solution": ""
+                },
+                {
+                    "id": "4_4_3",
+                    "prompt": "",
+                    "solution": ""
+                },
+                {
+                    "id": "4_4_4",
+                    "prompt": "",
+                    "solution": ""
+                }
+            ]
+        },
+        {
+            "id": "4_5",
+            "prompt": "",
+            "solution": "",
+            "has_children": true,
+            "children": [
+                {
+                    "id": "4_5_1",
+                    "prompt": "",
+                    "solution": ""
+                },
+                {
+                    "id": "4_5_2",
+                    "prompt": "",
+                    "solution": ""
+                },
+                {
+                    "id": "4_5_3",
+                    "prompt": "",
+                    "solution": ""
+                },
+                {
+                    "id": "4_5_4",
+                    "prompt": "",
+                    "solution": ""
+                }
+            ]
+        }
+    ]
+}

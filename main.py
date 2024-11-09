@@ -2,10 +2,11 @@
 import sys
 import json
 import os
+from utils import *
 sys.path.append("./py_scripts")
 from json_tasks import json_tasks
 from shell_env import shell_task_1, shell_task_2
-from utils import *
+
 def main_loop():
     os.system("clear")
     print("DATA SCIENCE LABS\n\nQ - exit Data Science Labs\nS - view your scores\nEnter - Start Labs")

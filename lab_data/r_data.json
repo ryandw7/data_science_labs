@@ -1,0 +1,44 @@
+{
+    "id": 5,
+    "type": "quiz",
+    "has_children": true,
+    "labs": [
+        {
+            "id": "5_1",
+            "type": "multi_choice",
+            "has_children": false,
+            "answers": [
+                "a",
+                "b",
+                "c",
+                "d"
+            ],
+            "correct_answer": "c"
+        },
+        {
+            "id": "5_2",
+            "type": "multi_choice",
+            "has_children": false,
+            "answers": [
+                "a",
+                "b",
+                "c",
+                "d"
+            ],
+            "correct_answer": "a"
+        },
+        {
+            "id": "5_3",
+            "type": "multi_choice",
+            "has_children": false,
+            "answers": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e"
+            ],
+            "correct_answer": "e"
+        }
+    ]
+}
