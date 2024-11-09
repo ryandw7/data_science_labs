@@ -1,59 +1,63 @@
-
 {
+    "id": 1,
+    "type": "quiz",
     "labs": [
         {
+            "id": "1_1",
             "name": "Simple File Commands",
-            "tasks": [
+            "type": "quiz",
+            "has_children": true,
+            "children": [
                 {
-                    "id": 1,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Display your current working directory.",
                     "answer": "pwd"
                 },
                 {
-                    "id": 2,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Change to your home directory.",
                     "answer": "cd ~"
                 },
                 {
-                    "id": 3,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Display the contents of your current directory.",
                     "answer": "ls"
                 },
                 {
-                    "id": 4,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Display all files including hidden directories.",
                     "answer": "ls -a"
                 },
                 {
-                    "id": 5,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Display a long list of the contents of the current working directory.",
                     "answer": "ls -l"
                 },
                 {
-                    "id": 6,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Display the file types of the current working directory.",
                     "answer": "ls -F"
                 },
                 {
-                    "id": 7,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Return to your home directory.",
                     "answer": "cd ~"
                 },
                 {
-                    "id": 8,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Display the contents of the '/etc/default/keyboard' file.",
                     "answer": "cat /etc/default/keyboard"
                 },
                 {
-                    "id": 9,
+                   "id": "1_1_1",
                     "type": "multi-choice",
                     "prompt": "Under what circumstance must you refrain from using the cat command to view the contents of a file?",
                     "answers": [
@@ -64,7 +68,7 @@
                     "answer": "b"
                 },
                 {
-                    "id": 10,
+                    "id": "1_1_1",
                     "type": "multi-answer",
                     "prompt": "Display the contents of the '/etc/default/keyboard' file and the '/etc/default/cron file",
                     "answers": [
@@ -73,13 +77,13 @@
                     ]
                 },
                 {
-                    "id": 11,
+                    "id": "1_1_1",
                     "type": "single-answer",
                     "prompt": "Display the contents of the '/etc/default/keyboard' file and the '/etc/default/cron' file using a single command.",
                     "answer": "more /etc/default/keyboard /etc/default/cron"
                 },
                 {
-                    "id": 12,
+                    "id": "1_1_1",
                     "type": "multi-choice",
                     "prompt": "What does the symbol '~' represent?",
                     "answers": [
@@ -90,7 +94,7 @@
                     "answer": "a"
                 },
                 {
-                    "id": 13,
+                    "id": "1_1_1",
                     "type": "multi-choice",
                     "prompt": "Complete the missing options to the mv command and their descriptions below:\n\n -i \n",
                     "answers": [
@@ -101,7 +105,7 @@
                     "answer": "b"
                 },
                 {
-                    "id": 14,
+                    "id": "1_1_1",
                     "type": "multi-choice",
                     "prompt": "\n -r \n",
                     "answers": [
@@ -114,6 +118,7 @@
             ]
         },
         {
+            "id": "1_2",
             "name": "File Redirection and Pipes",
             "tasks": [
                 {
@@ -137,6 +142,7 @@
             ]
         },
         {
+            "id": "1_3",
             "name": "Unix Meta-characters, Filenames and How to Use Man Pages",
             "tasks": [
                 {
@@ -199,6 +205,7 @@
             ]
         },
         {
+            "id": "1_4",
             "name": "Security",
             "tasks": [
                 {
@@ -223,17 +230,17 @@
                     "prompt": "Create a new file and a new directory – what are the permissions?",
                     "answer": "rw- r-- r--"
                 },
-		{
-		    "id": 3,
-		    "type": "multi-choice",
-		    "prompt": "Distinguish between the symbolic and octal modes.",
-		    "answers": [
-			    "a. Symbolic mode uses numeric values, while octal mode uses symbols like rwx.",
-			    "b. Symbolic mode is only used for directories, and octal mode is used for files.",
-			    "c. Symbolic uses symbols as seen above—there are symbolic permissions rw- r--r--. The octal equivalent is 644."
-	            ],
-	    	    "answer": "c"
-		},
+                {
+                    "id": 3,
+                    "type": "multi-choice",
+                    "prompt": "Distinguish between the symbolic and octal modes.",
+                    "answers": [
+                        "a. Symbolic mode uses numeric values, while octal mode uses symbols like rwx.",
+                        "b. Symbolic mode is only used for directories, and octal mode is used for files.",
+                        "c. Symbolic uses symbols as seen above—there are symbolic permissions rw- r--r--. The octal equivalent is 644."
+                    ],
+                    "answer": "c"
+                },
                 {
                     "id": 4,
                     "type": "single-answer",
@@ -269,17 +276,17 @@
                     ],
                     "answer": "b"
                 },
-		{
-		    "id": 9,
-	            "type": "multi-choice",
-	            "prompt": "What does the ps command display?",
-	            "answers": [
-			    "a. A process ID.",
-			    "b. The current memory usage of the system.",
-			    "c. The list of open files on the system."
-		    ],
-		    "answer": "a"
-		},
+                {
+                    "id": 9,
+                    "type": "multi-choice",
+                    "prompt": "What does the ps command display?",
+                    "answers": [
+                        "a. A process ID.",
+                        "b. The current memory usage of the system.",
+                        "c. The list of open files on the system."
+                    ],
+                    "answer": "a"
+                },
                 {
                     "id": 10,
                     "type": "multi-choice",
@@ -316,6 +323,7 @@
             ]
         },
         {
+            "id": "1_5",
             "name": "Other useful UNIX commands",
             "tasks": [
                 {
@@ -415,6 +423,7 @@
             ]
         },
         {
+            "id": "1_6",
             "name": "Variables",
             "tasks": [
                 {

@@ -4,12 +4,15 @@
     "labs": [
         {
             "id": "3_1",
+            "type": "project",
             "name": "Lab 1",
-            "sections": [
+            "has_children": true,
+            "children": [
                 {
                     "id": "3_1_1",
                     "name": "Part 1",
-                    "tasks": [
+                    "has_children": true,
+                    "children": [
                         {
                             "id": "3_1_1_1",
                             "prompt": "Write Python code to get the Python version you are using.",
@@ -23,12 +26,12 @@
                         {
                             "id": "3_1_1_3",
                             "prompt": "Write a Python program which accepts the internet usage in bytes and converts it into gigabytes.",
-                            "solution": ""
+                            "solution": "I = int(input('input some bytes value '))\n O = float(I/1073741824)\nO = (round(O, 2))\nprint(O)"
                         },
                         {
                             "id": "3_1_1_4",
                             "prompt": "Write a Python program to accept a filename from the user and check the extension of the file.",
-                            "solution": ""
+                            "solution": "import os\nname, ext = os.path.splitext(file.txt)\next"
                         },
                         {
                             "id": "3_1_1_5",
@@ -166,7 +169,7 @@
                             "prompt": "Export a csv file in your machine.",
                             "solution": ""
                         },
-                         {
+                        {
                             "id": "3_2_1_7",
                             "prompt": "Write a python code to calculate the sum of the numbers from 1 to 100 using the lambda function. (hint- Use the range function range(1,101))",
                             "solution": ""
@@ -174,10 +177,11 @@
                         {
                             "id": "3_2_1_8",
                             "prompt": "Write a Python code to create a generator(given below) and we will use this generator to run the demographics dataset to identify customers in Denver. (The code below is not complete. Remember to use the next method to initiate the generator.",
-                            "sub_prompts":["\n def search(keyword, filename):\n     print('generator started')\n    f = open(filename, 'r')\n   # Looping through the file line by line\n   for line in f:\n        if keyword in line:\n           #if keyword found, return it\n          yield line\n    f.close()"],
+                            "sub_prompts": [
+                                "\n def search(keyword, filename):\n     print('generator started')\n    f = open(filename, 'r')\n   # Looping through the file line by line\n   for line in f:\n        if keyword in line:\n           #if keyword found, return it\n          yield line\n    f.close()"
+                            ],
                             "solution": ""
                         },
-                       
                         {
                             "id": "3_2_1_9",
                             "prompt": "Write a Python program to create a generator that creates a Fibonacci series.",
