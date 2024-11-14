@@ -16,22 +16,26 @@
                         {
                             "id": "3_1_1_1",
                             "prompt": "Write Python code to get the Python version you are using.",
-                            "solution": "import sys\nprint(sys.executable)\nprint(sys.version)\nprint(sys.version_info)"
+                            "solution": "import sys\nprint(sys.executable)\nprint(sys.version)\nprint(sys.version_info)",
+                            "inputs": [],
+                            "outputs": []
                         },
                         {
                             "id": "3_1_1_2",
                             "prompt": "Write Python code to display the current date.",
-                            "solution": "import datetime\nnow = datetime.datetime.now()\nprint(now.strftime('%Y-%m-%d %H:%M:%S'))"
+                            "solution": "import datetime\nnow = datetime.datetime.now()\nprint(now.strftime('%Y-%m-%d %H:%M:%S'))",
+                            "inputs": [],
+                            "outputs": []
                         },
                         {
                             "id": "3_1_1_3",
                             "prompt": "Write a Python program which accepts the internet usage in bytes and converts it into gigabytes.",
                             "solution": "I = int(input('input some bytes value '))\n O = float(I/1073741824)\nO = (round(O, 2))\nprint(O)",
                             "inputs": [
-                                ""
+                                10398646425
                             ],
                             "outputs": [
-                                ""
+                                9.68
                             ]
                         },
                         {
@@ -39,10 +43,12 @@
                             "prompt": "Write a Python program to accept a filename from the user and check the extension of the file.",
                             "solution": "import os\nname, ext = os.path.splitext(file.txt)\next",
                             "inputs": [
-                                ""
+                                "abc.txt",
+                                "first_python_program.py"
                             ],
                             "outputs": [
-                                ""
+                                "txt",
+                                "py"
                             ]
                         },
                         {
@@ -50,10 +56,10 @@
                             "prompt": "Write a Python program which accepts a sequence of comma-separated from a user and generate a list and a tuple with those numbers.",
                             "solution": "values = input('input some comma separated numbers : ')\nlist = values.split(',')\ntuple = tuple(list)\nprint('List: ', list)\nprint('Tuple: ', tuple)",
                             "inputs": [
-                                ""
+                                "3,5,7,23"
                             ],
                             "outputs": [
-                                ""
+                                "List ['3','5','7', '23']\nTuple : ('3', ' 5', ' 7', ' 23')"
                             ]
                         }
                     ]
@@ -67,10 +73,12 @@
                             "prompt": "Write a Python program which accepts the product mix and prints the total number of products.",
                             "solution": "text = input('input some product mix: ')\ntags = text.split('/')\nnumber = len(tags)\nnumber",
                             "inputs": [
-                                ""
+                                "Internet/Video/Voice",
+                                "Internet/Video"
                             ],
                             "outputs": [
-                                ""
+                                "3",
+                                "2"
                             ]
                         },
                         {
@@ -78,10 +86,12 @@
                             "prompt": "Write a Python program that accepts an integer (n) and returns the absolute number.",
                             "solution": "a = int(input('input a number: '))\na = abs(a)\nprint(a)",
                             "inputs": [
-                                ""
+                                "2",
+                                "-2"
                             ],
                             "outputs": [
-                                ""
+                                "output: abs(2) = 2",
+                                "output: abs(-2) = 2"
                             ]
                         },
                         {
@@ -89,10 +99,10 @@
                             "prompt": "Write a Python program that accepts an integer (n) and computes the log, square root, and square of the number",
                             "solution": "a = int(input('Input a number: '))\nlog = math.log(a)\nsqr = a*a\nsqr_root = math.sqrt(a)\nprint(log)\nprint(sqr)\nprint(sqr_root)",
                             "inputs": [
-                                ""
+                                "100"
                             ],
                             "outputs": [
-                                ""
+                                "output: log(100) = 2\nsquare(100) = 10000\nsqrt(100) = 10"
                             ]
                         },
                         {
@@ -100,10 +110,10 @@
                             "prompt": "Write a Python program that takes in a date and prints the month, day, and year separately.",
                             "solution": "import datetime\na = '2010-01-31'\ndate = datetime.datetime.strptime(a,'%Y-%m-%d')\nprint(datee.month)\nprint(datee.year)\nprint(datee.day)",
                             "inputs": [
-                                ""
+                                "04/23/1978"
                             ],
                             "outputs": [
-                                ""
+                                "day = 23\nmonth = April\nyear = 1978"
                             ]
                         },
                         {
@@ -111,10 +121,10 @@
                             "prompt": "Write a Python program to calculate the number of days between two dates.",
                             "solution": "from datetime import datetime\nstart_date = datetime.strptime('8/18/2008', '%m/%d/%Y')\nend_date = datetime.strptime('9/26/2008', '%m/%d/%Y')\nabs((end_date-start_date).days)",
                             "inputs": [
-                                ""
+                                "04/23/1978, 04/28/1978"
                             ],
                             "outputs": [
-                                ""
+                                "Days = 5"
                             ]
                         }
                     ]
@@ -126,16 +136,28 @@
                         {
                             "id": "3_1_3_1",
                             "prompt": "Write a Python program to Create a variable with your name",
-                            "sub_prompts": [
-                                "a. Output with whitespaces on each side of your name and between your first and last name. Display the result in lowercase.",
-                                "b. Print your name with whitespace stripped from both sides, but not between your first and last name. Display the result in uppercase."
-                            ],
-                            "solution": "a. F_name =input('Input first name : ')\nL_name =input('Input last name : ')\nfull_name = F_name + ' ' + L_name\nstring_length=len(full_name)+10    # will be adding 10 extra spaces\nstring_revised=full_name.center(string_length)\nprint (string_revised)\n\nb. print(string_revised.lstrip())\nprint(string_revised.rstrip())\nprint(string_revised.upper())",
-                            "inputs": [
-                                ""
-                            ],
-                            "outputs": [
-                                ""
+                            "has_children": true,
+                            "children": [
+                                {
+                                    "prompt": "a. Output with whitespaces on each side of your name and between your first and last name. Display the result in lowercase.",
+                                    "solution": "F_name =input('Input first name : ')\nL_name =input('Input last name : ')\nfull_name = F_name + ' ' + L_name\nstring_length=len(full_name)+10    # will be adding 10 extra spaces\nstring_revised=full_name.center(string_length)\nprint (string_revised)",
+                                    "inputs": [
+                                        "{first_name: 'Jon', last_name: 'Kennedy'}"
+                                    ],
+                                    "outputs": [
+                                        "‘ jon kennedy ‘"
+                                    ]
+                                },
+                                {
+                                    "prompt": "b. Print your name with whitespace stripped from both sides, but not between your first and last name. Display the result in uppercase.",
+                                    "solution": "print(string_revised.lstrip())\nprint(string_revised.rstrip())\nprint(string_revised.upper())",
+                                    "inputs": [
+                                        "{first_name: 'Jon', last_name: 'Kennedy'}"
+                                    ],
+                                    "outputs": [
+                                        "‘JON KENNEDY’"
+                                    ]
+                                }
                             ]
                         },
                         {
@@ -143,10 +165,10 @@
                             "prompt": "Write a Python program to print out each and every value in a list using a for loop, then print out the total number of items in that list.",
                             "solution": "product_type=['Video','Home_Security', 'Voice', 'Internet']\nfor i in range(len(product_type)):\n     print(product_type[i])\ni=i+1\nprint('total products = ' ,int(i))",
                             "inputs": [
-                                ""
+                                "product_type=[‘Video’ , ’Home Security’, ‘Voice’, ‘Internet’]"
                             ],
                             "outputs": [
-                                ""
+                                "Product 1: Video\nProduct2: Home Security\nProduct3: Voice\nProduct4: Internet\nTotal Products = 4"
                             ]
                         },
                         {
@@ -154,10 +176,10 @@
                             "prompt": "Write a Python Program to get the max, sum, and min of a list of integers.",
                             "solution": "print(string_revised.lstrip())\nprint(string_revised.rstrip())\nprint(string_revised.upper())",
                             "inputs": [
-                                ""
+                                "total_revenue=[‘123.56’ , ’452.3’ , ’22.7’, ‘9’, 0.456’, 0, 1, ‘784’]"
                             ],
                             "outputs": [
-                                ""
+                                "min: 0\nmax: 784\nsum = 1393.016\nmean: 174.127"
                             ]
                         },
                         {
@@ -173,22 +195,21 @@
                             ],
                             "solution": "v='I am learning Python. I will become an expert at Python'\nStr1 = v.find('Python')\nStr2 = v.rfind('Python')\nStr3 = v.count('Python')\nStr4 = v.split()\nStr5= v.replace('Python','Ruby')\nprint(Str1)\nprint(Str2)\nprint(Str3)\nprint(Str4)\nprint(Str5",
                             "inputs": [
-                                ""
+                                "‘I am learning Python. I will become an expert at Python’"
                             ],
                             "outputs": [
-                                ""
+                                "14\n49\n2\n['I', 'am', 'learning', 'Python.', 'I', 'will', 'become', 'an', 'expert', 'at', 'Python']\nI am learning Ruby. I will become an expert at Ruby"
                             ]
                         },
                         {
                             "id": "3_1_3_5",
                             "prompt": "Write a Python program to find out which customers have an active/inactive/unknown status from a list of 0, 1, and ‘NA’. 0 means inactive, 1 mean active, ‘NA’ means unknown status.",
                             "solution": "Input1=[0,1,0,0,0,1,1,0,1,0,0,1,1,'NA','NA']\nfor i in range(len(Input1)):\n    if Input1[i] == 0:\n        print ('inactive')\n    elif Input1[i]== 1:\n        print ('active')\n    else:\n        print('unknown status')",
-                            ,
                             "inputs": [
-                                ""
+                                "[0,1,0,0,0,1,1,0,1,0,0,1,1,’NA’,’NA’]"
                             ],
                             "outputs": [
-                                ""
+                                "inactive\nactive\ninactive\ninactive\ninactive\nactive\nactive\ninactive\nactive\ninactive\ninactive\nactive\nactive\nunknown status\n unknown status"
                             ]
                         },
                         {
@@ -196,21 +217,24 @@
                             "prompt": "Write a Python program that takes in a list of device types connected to a network and prints a string for each value in the format:\n No of mobile devices connected = 5\n No of tablet devices connected = 3\n No of TV devices connected = 0",
                             "solution": "x= ['Mobile', 'Mobile', 'Mobile', 'Mobile', 'Laptop', 'Laptop', 'Laptop', 'Tablet','Mobile']\n#initializing the counters\nm=0\nl=0\nt=0\nt2=0\nfor i in range(len(x)):\n    if x[i]=='Mobile':\n        m=m+1\n    elif x[i]=='Laptop':\n        l=l+1\n    elif x[i]=='Tablet':\n        t=t+1\n    elif x[i]=='TV':\n        t2=t2+1\n        else:\n        print('Nothing is connected')\nprint('No of Mobile devices connected = %i' %m)\nprint('No of laptop devices connected = %i' %l)\n    print('No of Tablet devices connected = %i' %t)\n print('No of TV devices connected = %i' %t2)",
                             "inputs": [
-                                ""
+                                "[‘Mobile’, Mobile’, ‘Mobile’, Mobile’, ‘Laptop’, ‘Laptop’, ‘Laptop’, ‘Tablet’,’Mobile’]",
+                                "[‘Mobile’, Mobile’, ‘Laptop’, ‘Laptop’ ,’TV’, TV’]"
                             ],
                             "outputs": [
-                                ""
+                                "No of Mobile devices connected = 5\nNo of laptop devices connected = 3\nNo of Tablet devices connected = 1\nNo of TV devices connected = 0",
+                                "No of Mobile devices connected = 2\nNo of laptop devices connected = 1\nNo of TV devices connected = 2"
                             ]
                         },
                         {
                             "id": "3_1_3_7",
-                            "prompt": "Write a Python program that notifies customers when their data usage has reached 20 Gigabytes using a while loop to increment a variable ‘data_usage’ which starts at 5gb and goes up in increments of 5.",
-                            "solution": "x=[3,6,8,11,15,18,20,22]\ni=0\nwhile x[i] <=5:\n    p=i+1\n    i=i+1\nprint('Customer has within  5 G limit on Day %i' %p)\n    i=0\nwhile x[i] <=10:\n    p=i+1\n    i=i+1\nprint('Customer has within  10 G limit on Day %i' %p)\ni=0\nwhile x[i] <=15:\n    p=i+1\n    i=i+1\nprint('Customer has within  15 G limit on Day %i' %p)\ni=0\nwhile x[i] <=20:\n    p=i+1\n    i=i+1\nprint('Customer has within  20 G limit on Day %i' %p)",
+                            "prompt": "Write a Python Program to notify customers when their downloading data bytes reached 20 G starting from 5G at increments of 5. (use a while loop to do that)",
+                            "solution": "x=[3,6,8,11,15,18,20,22]\ni=0\nwhile x[i] <=5:\n    p=i+1\n    i=i+1\nprint('Customer has within  5 G limit on Day %i' %p)\n    i=0\nwhile x[i] <=10:\n    p=i+1\n    i=i+1\nprint('Customer has within 10 G limit on Day %i' %p)\ni=0\nwhile x[i] <=15:\n    p=i+1\n    i=i+1\nprint('Customer has within  15 G limit on Day %i' %p)\ni=0\nwhile x[i] <=20:\n    p=i+1\n    i=i+1\nprint('Customer has within  20 G limit on Day %i' %p)",
                             "inputs": [
-                                ""
+                                "3,6,8,11,15,18,20,22",
+                                "6,8,11,21,42,65"
                             ],
                             "outputs": [
-                                ""
+                                "Customer has within 5 G limit on Day 1\nCustomer has within 10 G limit on Day 3\nCustomer has within 15 G limit on Day 5\nCustomer has within 20 G limit on Day 7\nCustomer has within 5 G limit on Day 1.\nCustomer has within 10 G limit on Day 3.\nCustomer has within 15 G limit on Day 4.\nCustomer has within 20 G limit on Day 4."
                             ]
                         },
                         {
@@ -218,10 +242,10 @@
                             "prompt": "Write a Python program that has a dictionary where the keys are names of the customers and values are the number of times they connected to the wifi in a day, then print out a string for each customer stating the number of times they connected to wifi.",
                             "solution": "customer_list = {'Ryan': 230,'Adam': 200,'Jack': 120,'Hugh': 79}\nfor key, value in customer_list.items():\n    print('Name: %s' % key)\n    print('No of wifi_connections: %s' % value)",
                             "inputs": [
-                                ""
+                                "customer_list = {'Ryan': '230','Adam': '200','Jack': '120',’Hugh’: ‘79’}"
                             ],
                             "outputs": [
-                                ""
+                                "Name: Ryan\nNo of wifi_connections: 230\nName: Adam\nNo of wifi_connections: 200\nName: Jack\nNo of wifi_connections: 120\nName: Hugh\nNo of wifi_connections: 79"
                             ]
                         }
                     ]
@@ -241,10 +265,10 @@
                             "prompt": "Write a Python program to develop a function that accepts a name as an argument then prints out a string like “{name} loves using the X1 remote!”",
                             "solution": "def text(name='Anyname'):\n    print( '\n %s' % name , 'loves using the X1 remote')\ntext('Adam')\ntext('Jake Sully')\ntext('Fiona')",
                             "inputs": [
-                                ""
+                                "name='Tony'"
                             ],
                             "outputs": [
-                                ""
+                                "Tony loves using the X1 remote."
                             ]
                         },
                         {
@@ -252,10 +276,10 @@
                             "prompt": "Write a function that takes in two arguments: state_name, city_name and an optional argument:  fav_sports_team. The function should print each value.",
                             "solution": "def game(State, City, Sports_team= None):\n    print('State: %s' %State.title())\n    print('City: %s' %City.title())\n    if Sports_team:\n        print('Sports_team: %s' %Sports_team)\ngame('PA', 'Pennsylvania', 'Eagles')",
                             "inputs": [
-                                ""
+                                "def func(State, City, Sports_team= None):"
                             ],
                             "outputs": [
-                                ""
+                                "State: Pa\nCity: Pennsylvania\nSports_team: Eagles"
                             ]
                         },
                         {
@@ -263,54 +287,40 @@
                             "prompt": "Write a Python function to multiply all the numbers in a list.",
                             "solution": "import numpy as np\nmylist = [8, 2, 3, -1, 7]\n result = np.prod(np.array(mylist))\nresult\n",
                             "inputs": [
-                                ""
+                                "8, 2, 3, -1, 7"
                             ],
                             "outputs": [
-                                ""
+                                "-336"
                             ]
                         },
                         {
                             "id": "3_2_1_4",
                             "prompt": "Look at the python code below and explain what it is doing.\n\ndef test(a)\n   def add(b):\n       nonlocal a\n        a += 1\n        return a+b\n    return add\nfunc = test(4)\nprint(func(4))",
-                            "solution": "",
-                            "inputs": [
-                                ""
-                            ],
-                            "outputs": [
-                                ""
-                            ]
+                            "solution": "This is a nested function code. Here it is defining 2 functions ‘test’ and ‘add’ . The inner function returns a value (a+b) whereas the outer function returns not the value but the func ‘add’. When we first call out the test(4) it essentially assigns the value 4 to a and returns the function add. Now when we go to the print like and call the func(4), here the add function gets activated assigning the value of 4 to b. The output of this function will be 9.",
+                            "inputs": [],
+                            "outputs": []
                         },
                         {
                             "id": "3_2_1_5",
                             "prompt": "Write a python code to import a csv file and open it. Print the top 5 rows.",
                             "solution": "import csv\nwith open('some.csv', 'wb') as f:\n    writer = csv.writer(f)\n    writer.writerows(someiterable)",
-                            "inputs": [
-                                ""
-                            ],
-                            "outputs": [
-                                ""
-                            ]
+                            "inputs": [],
+                            "outputs": []
                         },
                         {
                             "id": "3_2_1_6",
                             "prompt": "Export a csv file in your machine.",
                             "solution": "import csv\nwith open('some.csv', 'rb') as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print (row)",
-                            "inputs": [
-                                ""
-                            ],
-                            "outputs": [
-                                ""
-                            ]
+                            "inputs": [],
+                            "outputs": []
                         },
                         {
                             "id": "3_2_1_7",
                             "prompt": "Write a python code to calculate the sum of the numbers from 1 to 100 using the lambda function. (hint- Use the range function range(1,101))",
                             "solution": "from functools import reduce\nreduce(lambda x, y: x+y, range(1,101))",
-                            "inputs": [
-                                ""
-                            ],
+                            "inputs": [],
                             "outputs": [
-                                ""
+                                5050
                             ]
                         },
                         {
@@ -321,21 +331,17 @@
                             ],
                             "solution": "def search(Keyword,filename):\n    print('generator started')\n    f=open(filename,'r')\n    for line in f:\n        if keyword in line:\n            yield line\n    f.close()\n the_generator = search('Denver', 'XXX.csv')\n    print(next(the_generator))",
                             "inputs": [
-                                ""
+                                "the_generator=search(‘Denver’, XXX.csv)"
                             ],
-                            "outputs": [
-                                ""
-                            ]
+                            "outputs": []
                         },
                         {
                             "id": "3_2_1_9",
                             "prompt": "Write a Python program to create a generator that creates a Fibonacci series.",
                             "solution": "def fibonacci(n):\n    # A generator for creating the Fibonacci numbers\n    a, b, counter = 0, 1, 0\n    while True:\n        if (counter > n):\n             return\n        yield a\n        a, b = b, a + b\n        counter += 1\nf = fibonacci(5)\nfor x in f:\n    print(x, ' ', end='') #\n print()",
-                            "inputs": [
-                                ""
-                            ],
+                            "inputs": [],
                             "outputs": [
-                                ""
+                                "[0,1,1,2,3,5,8]"
                             ]
                         }
                     ]
