@@ -5,74 +5,81 @@
     "labs": [
         {
             "id": "4_1",
-            "prompt": "",
-            "solution": "",
+            "prompt": "A committee of 6 people is to be formed from a group of 20 people. The committee has to have the number of women double that of the men. In how many ways can this committee be formed if there are 12 men?",
+            "explanation": "If there 12 men, then there are 8 women. The committee has six people with the number of women double that of the men, hence the committee has 4 women and 2 men. The number of ways of selecting 4 women from 8 is given 8C4 = 70. The number of ways of selecting 2 men from 12 is given by 12C2 = 66. The number of selecting 4 women and 2 men to form the committee is given by : 8C4 * 12C2 = 70 * 66 = 4620",
+            "solution": "4620",
             "has_children": false
         },
         {
             "id": "4_2",
-            "prompt": "",
-            "solution": "",
+            "prompt": "A student's marks in five tests are 36%, 78%, 67%, 88% and 98%. The weights for the five tests are 1, 2, 2, 3, 3 respectively. Find the weighted mean μ of the five tests.",
+            "explanation": "Let the marks be: x1 = 36%, x2 = 78%, x3 = 67%, x4 = 88%, x5 = 98% and the respective weights be: w1 = 1, w2 = 2, w3 = 2, w4 = 3, w5 = 3. The weighted mean = Σ xi*wi / Σ wi Σ xi*wi = 36% * 1 + 78%*2 + 67%*2 + 88%*3 + 98%*3 = 884% Σ wi = 1 + 2 + 2 + 3 + 3 = 11 weighted mean = 884% / 11 = 80%",
+            "solution": "80%",
             "has_children": false
         },
         {
             "id": "4_3",
-            "prompt": "",
+            "prompt": "For a certain type of computers, the length of time between charges of the battery is normally distributed with a mean of 50 hours and a standard deviation of 15 hours. Sara owns one of these computers and wants to know the probability that the length of time will be between 50 and 70 hours.",
+            "explanation": "Let x be the random variable that represents the length of time. It has a mean of 50 and a standard deviation of 15. We have to find the probability that x is between 50 and 70 or P( 50< x < 70)\n For x = 50 , z = (50 - 50) / 15 = 0 \n For x = 70 , z = (70 - 50) / 15 = 1.33 (rounded to 2 decimal places) \nP( 50< x < 70) = P( 0< z < 1.33) = [area to the left of z = 1.33] - [area to the left of z = 0] = 0.9082 - 0.5 = 0.4082\n\nThe probability that Sara's computer has a length of time between 50 and 70 hours is equal to 0.4082.",
             "solution": "",
             "has_children": false
         },
         {
             "id": "4_4",
-            "prompt": "",
+            "prompt": "The annual salaries of employees in a large company are approximateley normally distributed with a mean of $50,000 and a standard deviation of $20,000.",
+            "explanation": "",
             "solution": "",
             "has_children": true,
             "children": [
                 {
                     "id": "4_4_1",
-                    "prompt": "",
-                    "solution": ""
+                    "prompt": "a. What percent of people earn less than $40,000?",
+                    "explanation": "For x = 40000, z = -0.5\nArea to the left (less than) of z = -0.5 is equal to 0.3085 = 30.85% earn less than $40,000.",
+                    "solution": 30.85
                 },
                 {
                     "id": "4_4_2",
-                    "prompt": "",
-                    "solution": ""
+                    "prompt": "b. What percent of people earn between $45,000 and $65,000?",
+                    "explanation": "For x = 45000 , z = -0.25 and for x = 65000, z = 0.75\nArea between z = -0.25 and z = 0.75 is equal to 0.3720 = 37.20% earn between $45,000 and $65,000.",
+                    "solution": 37.20
                 },
                 {
                     "id": "4_4_3",
-                    "prompt": "",
-                    "solution": ""
-                },
-                {
-                    "id": "4_4_4",
-                    "prompt": "",
-                    "solution": ""
+                    "prompt": "c. What percent of people earn more than $70,000?",
+                    "explanation": "For x = 70000, z = 1\nArea to the right (higher) of z = 1 is equal to 0.1586 = 15.86% earn more than $70,000",
+                    "solution": 15.86
                 }
             ]
         },
         {
             "id": "4_5",
-            "prompt": "",
+            "prompt": "A committee of 5 people is to be formed randomly from a group of 10 women and 6 men. Find the probability that the committee has",
+            "explanation": "since the events '3 women', '4 women' and '5 women' are all mutually exclusive, then P(at least 3 women) = P(3 women or 4 women or 5 women) = P(3 women) + P(4 women) + P(5 women) = 0.412087 + 0.288461 + 0.0576923 = 0.758240",
             "solution": "",
             "has_children": true,
             "children": [
                 {
                     "id": "4_5_1",
-                    "prompt": "",
+                    "prompt": "1. 3 women and 2 men.",
+                    "explanation": "In what follows nCr = n! / [ (n - r)!r! ] and is the number of combinations of n objects taken r at the time and P(A) is the probability that even A happens.\nThere are 16C5 ways to select 5 people (committee members) out of a total of 16 people\n(men and women)\nThere are 10C3 ways to select 3 women out of 10.\nThere are 6C2 ways to select 2 men out of 6.\nThere are 10C3*6C2 ways to select 3 women out of 10 AND 2 men out of 6.\nP(3 women AND 2 men) = 10C3*6C2 / 16C5 = 0.412087",
                     "solution": ""
                 },
                 {
                     "id": "4_5_2",
-                    "prompt": "",
+                    "prompt": "2. 4 women and 1 men.",
+                    "explanation": "P(4 women AND 1 men) = 10C4*6C1 / 16C5 = 0.288461",
                     "solution": ""
                 },
                 {
                     "id": "4_5_3",
-                    "prompt": "",
+                    "prompt": "3. 5 women.",
+                    "explanation": "P(5 women ) = 10C5*6C0 / 16C5 = 0.0576923 (in 6C0 the 0 is for no men)",
                     "solution": ""
                 },
                 {
                     "id": "4_5_4",
-                    "prompt": "",
+                    "prompt": "4. at least 3 women.",
+                    "explanation": "P(3 women or 4 women or 5 women)",
                     "solution": ""
                 }
             ]
