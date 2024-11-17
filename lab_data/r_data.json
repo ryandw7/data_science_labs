@@ -1,42 +1,43 @@
 {
     "id": 5,
     "type": "quiz",
+    "introduction": "Assuming you have R installed and running, run the following scripts before attempting the questions below:\ninstall.packages(c('tidyverse','data.table','pacman'))\nrequire('tidyverse','data.table')",
     "has_children": true,
     "labs": [
         {
             "id": "5_1",
             "type": "multi_choice",
-            "has_children": false,
+            "prompt": "Which of the following will give us the current directory of this R instance? Select only 1.",
             "answers": [
-                "a",
-                "b",
-                "c",
-                "d"
+                "a. directory()",
+                "b. setwd()",
+                "c. getwd()",
+                "d. dir.exists()"
             ],
             "correct_answer": "c"
         },
         {
             "id": "5_2",
             "type": "multi_choice",
-            "has_children": false,
+            "prompt": "Which of the following scripts will give us a character vector of all file names in the 'C:/Home' directory? Select only 1.",
             "answers": [
-                "a",
-                "b",
-                "c",
-                "d"
+                "a. list.files(path = 'C:/Home')",
+                "b. files(path = 'C:/Home')",
+                "c. wd.files('C:/Home')",
+                "d. list('C:Home')"
             ],
             "correct_answer": "a"
         },
         {
             "id": "5_3",
             "type": "multi_choice",
-            "has_children": false,
+            "prompt": "Which of the following scripts will read the 'DSA_Order_data'csv file in folder 'C:/Users/bntwok200/Box Sync/iComp Transaction Data/Work Files/Text Files'? Select all that are correct",
             "answers": [
-                "a",
-                "b",
-                "c",
-                "d",
-                "e"
+                "a. read.csv('C:/Users/bntwok200/Box Sync/iComp Transaction Data/Work Files/Text Files/DSA_Order_data.csv', stringsAsFactors=FALSE)",
+                "b. readr::read_csv('C:/Users/bntwok200/Box Sync/iComp Transaction Data/Work Files/Text Files/DSA_Order_data.csv')",
+                "c. read.csv('C:/Users/bntwok200/Box Sync/iComp Transaction Data/Work Files/Text Files/DSA_Order_data.csv', stringsAsFactors=TRUE)",
+                "d. data.table::fread('C:/Users/bntwok200/Box Sync/iComp Transaction Data/Work Files/Text Files/DSA_Order_data.csv')",
+                "e. all of the above."
             ],
             "correct_answer": "e"
         }

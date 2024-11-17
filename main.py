@@ -4,7 +4,7 @@ import json
 import os
 from utils import *
 sys.path.append("./py_scripts")
-from json_tasks import json_tasks
+from handle_quiz import json_tasks
 from shell_env import shell_task_1, shell_task_2
 
 def main_loop():

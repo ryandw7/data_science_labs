@@ -1,66 +1,68 @@
 {
     "id": 6,
+    "type": "problem_set",
+    "title":"SQL Labs",
     "has_children": true,
     "labs": [
         {
             "id": "6_1",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Select all columns from TRAINING_CUSTOMER_ACCOUNT table (sample 5)",
+            "solution": "SELECT *\nFROM NDW_EBI_WORK.TRAINING_CUSTOMER_ACCOUNT sample 5"
         },
         {
             "id": "6_2",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Select ACCOUNT_NUMBER, LOCATION_ID and ORGANIZATION_ID from TRAINING_CUSTOMER_ACCOUNT table (sample 5).",
+            "solution": "SELECT ACCOUNT_NUMBER,\n   LOCATION_ID,\n   ORGANIZATION_ID\nFROM NDW_EBI_WORK.TRAINING_CUSTOMER_ACCOUNT sample 5"
         },
         {
             "id": "6_3",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Select ACCOUNT_NUMBER, LOCATION_ID and ORGANIZATION_ID from TRAINING_CUSTOMER_ACCOUNT table (sample 5) and order by ORGANIZATION_ID ascending",
+            "solution": "SELECT ACCOUNT_NUMBER,\n   LOCATION_ID,\n   ORGANIZATION_ID\nFROM NDW_EBI_WORK.TRAINING_CUSTOMER_ACCOUNT sample 5\nORDER BY ORGANIZATION_ID"
         },
         {
             "id": "6_4",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Use my_account_number as an alias for ACCOUNT_NUMBER while selecting from TRAINING_CUSTOMER_ACCOUNT table.",
+            "solution": "SELECT ACCOUNT_NUMBER AS my_account_number\nFROM NDW_EBI_WORK.TRAINING_CUSTOMER_ACCOUNT sample 5"
         },
         {
             "id": "6_5",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Select all records from TRAINING_CUSTOMER_ACCOUNT where ACCOUNT_NUMBER = ACCOUNT2355",
+            "solution": "SELECT *\nFROM NDW_EBI_WORK.TRAINING_CUSTOMER_ACCOUNT\nWHERE ACCOUNT_NUMBER = 'ACCOUNT2355'"
         },
         {
             "id": "6_6",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Subscriber owned applications are indicated by SUBSCRIBER_OWNED_IND = 1. Select 5 customer owned equipment",
+            "solution": "SELECT *\nFROM NDW_EBI_WORK.TRAINING_ACCOUNT_EQUIPMENT\nWHERE SUBSCRIBER_OWNED_IND = 1 sample 5"
         },
         {
             "id": "6_7",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Find the number of customers who bring their own equipment using count(*)",
+            "solution": "SELECT count(*) AS customer_owned_equipment\nFROM NDW_EBI_WORK.TRAINING_ACCOUNT_EQUIPMENT\nWHERE SUBSCRIBER_OWNED_IND = 1"
         },
         {
             "id": "6_8",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Comcast offers discounted products to customers. Employee accounts can be found from TRAINING_ACCOUNT_EQUIPMENT.COURTESY_IND = Y. Find the number of employee accounts from TRAINING_ACCOUNT_EQUIPMENT table",
+            "solution": "SELECT count(*) AS total_equipment\nFROM NDW_EBI_WORK.TRAINING_ACCOUNT_EQUIPMENT\nWHERE COURTESY_IND <> 'Y'"
         },
         {
             "id": "6_9",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Records in many tables are active only between an effective and end date. E.g ACCOUNT_PRODUCT_EFF_DT and ACCOUNT_PRODUCT_END_DT in TRAINING_ACCOUNT_EQUIPMENT table. Find the number of records that were active on 1/1/2018",
+            "solution": "SELECT count(*) AS effective_new_year\nFROM NDW_EBI_WORK.TRAINING_ACCOUNT_EQUIPMENT\nWHERE '2018-01-01' BETWEEN ACCOUNT_EQUIPMENT_EFF_DT AND ACCOUNT_EQUIPMENT_END_DT"
         },
         {
             "id": "6_10",
-            "has_children": false,
-            "prompt": "",
-            "solution": ""
+            "type":"problem_set_problem",
+            "prompt": "Employee indicators are cryptic. Expand the indicators. E.g 'Y' to 'Employee', 'N' to 'Non Employee', '' to Unknown",
+            "solution": "SELECT CASE COURTESY_IND\n      WHEN 'Y' THEN 'Employee'\n      WHEN 'N' THEN 'Non Employee'\n      ELSE 'Unknown'\n   END AS Expanded_Indicator\nFROM NDW_EBI_WORK.TRAINING_ACCOUNT_EQUIPMENT sample 5"
         }
     ]
 }

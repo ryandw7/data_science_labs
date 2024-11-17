@@ -1,47 +1,80 @@
 {
     "Linux": [
         {
-            "topic": "Simple File Commands",
+            "has_children": false,
+            "title": "Simple File Commands",
             "total": 14,
             "best": 5
         },
         {
-            "topic": "File Redirection and Pipes",
+            "has_children": false,
+            "title": "File Redirection and Pipes",
             "total": 3,
             "best": 0
         },
         {
-            "topic": "Unix Meta-characters",
+            "has_children": false,
+            "title": "Unix Meta-characters",
             "total": 7,
             "best": 0
         },
         {
-            "topic": "Security",
+            "has_children": false,
+            "title": "Security",
             "total": 11,
             "best": 0
         },
         {
-            "topic": "Other useful UNIX commands",
+            "has_children": false,
+            "title": "Other useful UNIX commands",
             "total": 8,
             "best": 0
         },
         {
-            "topic": "Variables",
+            "has_children": false,
+            "title": "Variables",
             "total": 7,
             "best": 0
         }
     ],
     "Shell Scripting": [
         {
-            "topic": "Favorite Sport",
+            "has_children": false,
+            "title": "Favorite Sport",
             "status": "Not Completed"
         },
         {
-            "topic": "Bash Counter",
+            "has_children": false,
+            "title": "Bash Counter",
             "status": "Not Completed"
         }
     ],
-    "Python": [],
+    "Python": [
+        {
+            "type": "problem_set_parent",
+            "id": 3,
+            "title": "Python Lab 1",
+            "has_children": true,
+            "children": [
+                {
+                    "title": "Part 1",
+                    "type": "problem_set"
+                },
+                {
+                    "title": "Part 2",
+                    "type": "problem_set"
+                },
+                {
+                    "title": "Part 3",
+                    "type": "problem_set"
+                }
+            ]
+        },
+        {
+            "type": "problem_set",
+            ""
+        }
+    ],
     "Statistics": [],
     "R": []
 }

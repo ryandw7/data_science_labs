@@ -1,20 +1,21 @@
 {
-    "type": "project",
+    "type": "problem_set_parent",
+    "title": "Python Labs",
     "id": 3,
-    "labs": [
+    "children": [
         {
             "id": "3_1",
-            "type": "project",
-            "name": "Lab 1",
-            "has_children": true,
+            "type": "problem_set_parent",
+            "title": "Python Lab 1",
             "children": [
                 {
                     "id": "3_1_1",
+                    "type": "problem_set",
                     "name": "Part 1",
-                    "has_children": true,
                     "children": [
                         {
                             "id": "3_1_1_1",
+                            "type": "problem_set_problem",
                             "prompt": "Write Python code to get the Python version you are using.",
                             "solution": "import sys\nprint(sys.executable)\nprint(sys.version)\nprint(sys.version_info)",
                             "inputs": [],
@@ -22,6 +23,7 @@
                         },
                         {
                             "id": "3_1_1_2",
+                            "type": "problem_set_problem",
                             "prompt": "Write Python code to display the current date.",
                             "solution": "import datetime\nnow = datetime.datetime.now()\nprint(now.strftime('%Y-%m-%d %H:%M:%S'))",
                             "inputs": [],
@@ -40,6 +42,7 @@
                         },
                         {
                             "id": "3_1_1_4",
+                            "type": "problem_set_problem",
                             "prompt": "Write a Python program to accept a filename from the user and check the extension of the file.",
                             "solution": "import os\nname, ext = os.path.splitext(file.txt)\next",
                             "inputs": [
@@ -53,6 +56,7 @@
                         },
                         {
                             "id": "3_1_1_5",
+                            "type": "problem_set_problem",
                             "prompt": "Write a Python program which accepts a sequence of comma-separated from a user and generate a list and a tuple with those numbers.",
                             "solution": "values = input('input some comma separated numbers : ')\nlist = values.split(',')\ntuple = tuple(list)\nprint('List: ', list)\nprint('Tuple: ', tuple)",
                             "inputs": [
@@ -66,10 +70,12 @@
                 },
                 {
                     "id": "3_1_2",
-                    "name": "Part 2",
+                    "type":"problem_set",
+                    "title": "Part 2",
                     "tasks": [
                         {
                             "id": "3_1_2_1",
+                            "type": "problem_set_problem",
                             "prompt": "Write a Python program which accepts the product mix and prints the total number of products.",
                             "solution": "text = input('input some product mix: ')\ntags = text.split('/')\nnumber = len(tags)\nnumber",
                             "inputs": [
@@ -83,6 +89,7 @@
                         },
                         {
                             "id": "3_1_2_2",
+                            "type": "problem_set_problem",
                             "prompt": "Write a Python program that accepts an integer (n) and returns the absolute number.",
                             "solution": "a = int(input('input a number: '))\na = abs(a)\nprint(a)",
                             "inputs": [
@@ -96,6 +103,7 @@
                         },
                         {
                             "id": "3_1_2_3",
+                            "type": "problem_set_problem",
                             "prompt": "Write a Python program that accepts an integer (n) and computes the log, square root, and square of the number",
                             "solution": "a = int(input('Input a number: '))\nlog = math.log(a)\nsqr = a*a\nsqr_root = math.sqrt(a)\nprint(log)\nprint(sqr)\nprint(sqr_root)",
                             "inputs": [
@@ -107,6 +115,7 @@
                         },
                         {
                             "id": "3_1_2_4",
+                            "type": "problem_set_problem",
                             "prompt": "Write a Python program that takes in a date and prints the month, day, and year separately.",
                             "solution": "import datetime\na = '2010-01-31'\ndate = datetime.datetime.strptime(a,'%Y-%m-%d')\nprint(datee.month)\nprint(datee.year)\nprint(datee.day)",
                             "inputs": [
@@ -118,6 +127,7 @@
                         },
                         {
                             "id": "3_1_2_5",
+                            "type": "problem_set_problem",
                             "prompt": "Write a Python program to calculate the number of days between two dates.",
                             "solution": "from datetime import datetime\nstart_date = datetime.strptime('8/18/2008', '%m/%d/%Y')\nend_date = datetime.strptime('9/26/2008', '%m/%d/%Y')\nabs((end_date-start_date).days)",
                             "inputs": [
@@ -131,14 +141,18 @@
                 },
                 {
                     "id": "3_1_3",
-                    "name": "Part 3",
+                    "type":"problem_set",
+                    "title": "Part 3",
+
                     "tasks": [
                         {
                             "id": "3_1_3_1",
                             "prompt": "Write a Python program to Create a variable with your name",
+                            "type": "problem_set_problem",
                             "has_children": true,
                             "children": [
                                 {
+                                    "id": "3_1_3_1_1",
                                     "prompt": "a. Output with whitespaces on each side of your name and between your first and last name. Display the result in lowercase.",
                                     "solution": "F_name =input('Input first name : ')\nL_name =input('Input last name : ')\nfull_name = F_name + ' ' + L_name\nstring_length=len(full_name)+10    # will be adding 10 extra spaces\nstring_revised=full_name.center(string_length)\nprint (string_revised)",
                                     "inputs": [
@@ -149,6 +163,7 @@
                                     ]
                                 },
                                 {
+                                    "id": "3_1_3_1_2",
                                     "prompt": "b. Print your name with whitespace stripped from both sides, but not between your first and last name. Display the result in uppercase.",
                                     "solution": "print(string_revised.lstrip())\nprint(string_revised.rstrip())\nprint(string_revised.upper())",
                                     "inputs": [
@@ -162,6 +177,7 @@
                         },
                         {
                             "id": "3_1_3_2",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python program to print out each and every value in a list using a for loop, then print out the total number of items in that list.",
                             "solution": "product_type=['Video','Home_Security', 'Voice', 'Internet']\nfor i in range(len(product_type)):\n     print(product_type[i])\ni=i+1\nprint('total products = ' ,int(i))",
                             "inputs": [
@@ -173,6 +189,7 @@
                         },
                         {
                             "id": "3_1_3_3",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python Program to get the max, sum, and min of a list of integers.",
                             "solution": "print(string_revised.lstrip())\nprint(string_revised.rstrip())\nprint(string_revised.upper())",
                             "inputs": [
@@ -184,6 +201,7 @@
                         },
                         {
                             "id": "3_1_3_4",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python program to understand your Text Data",
                             "sub_prompts": [
                                 "Store the following sentence in a variable: ‘I am learning Python. I will become an expert at Python.’",
@@ -203,6 +221,7 @@
                         },
                         {
                             "id": "3_1_3_5",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python program to find out which customers have an active/inactive/unknown status from a list of 0, 1, and ‘NA’. 0 means inactive, 1 mean active, ‘NA’ means unknown status.",
                             "solution": "Input1=[0,1,0,0,0,1,1,0,1,0,0,1,1,'NA','NA']\nfor i in range(len(Input1)):\n    if Input1[i] == 0:\n        print ('inactive')\n    elif Input1[i]== 1:\n        print ('active')\n    else:\n        print('unknown status')",
                             "inputs": [
@@ -214,6 +233,7 @@
                         },
                         {
                             "id": "3_1_3_6",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python program that takes in a list of device types connected to a network and prints a string for each value in the format:\n No of mobile devices connected = 5\n No of tablet devices connected = 3\n No of TV devices connected = 0",
                             "solution": "x= ['Mobile', 'Mobile', 'Mobile', 'Mobile', 'Laptop', 'Laptop', 'Laptop', 'Tablet','Mobile']\n#initializing the counters\nm=0\nl=0\nt=0\nt2=0\nfor i in range(len(x)):\n    if x[i]=='Mobile':\n        m=m+1\n    elif x[i]=='Laptop':\n        l=l+1\n    elif x[i]=='Tablet':\n        t=t+1\n    elif x[i]=='TV':\n        t2=t2+1\n        else:\n        print('Nothing is connected')\nprint('No of Mobile devices connected = %i' %m)\nprint('No of laptop devices connected = %i' %l)\n    print('No of Tablet devices connected = %i' %t)\n print('No of TV devices connected = %i' %t2)",
                             "inputs": [
@@ -227,6 +247,7 @@
                         },
                         {
                             "id": "3_1_3_7",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python Program to notify customers when their downloading data bytes reached 20 G starting from 5G at increments of 5. (use a while loop to do that)",
                             "solution": "x=[3,6,8,11,15,18,20,22]\ni=0\nwhile x[i] <=5:\n    p=i+1\n    i=i+1\nprint('Customer has within  5 G limit on Day %i' %p)\n    i=0\nwhile x[i] <=10:\n    p=i+1\n    i=i+1\nprint('Customer has within 10 G limit on Day %i' %p)\ni=0\nwhile x[i] <=15:\n    p=i+1\n    i=i+1\nprint('Customer has within  15 G limit on Day %i' %p)\ni=0\nwhile x[i] <=20:\n    p=i+1\n    i=i+1\nprint('Customer has within  20 G limit on Day %i' %p)",
                             "inputs": [
@@ -239,6 +260,7 @@
                         },
                         {
                             "id": "3_1_3_8",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python program that has a dictionary where the keys are names of the customers and values are the number of times they connected to the wifi in a day, then print out a string for each customer stating the number of times they connected to wifi.",
                             "solution": "customer_list = {'Ryan': 230,'Adam': 200,'Jack': 120,'Hugh': 79}\nfor key, value in customer_list.items():\n    print('Name: %s' % key)\n    print('No of wifi_connections: %s' % value)",
                             "inputs": [
@@ -254,14 +276,17 @@
         },
         {
             "id": "3_2",
-            "name": "Lab 2",
-            "sections": [
+            "type":"problem_set_parent",
+            "title": "Python Lab 2",
+            "children": [
                 {
                     "id": "3_2_1",
-                    "name": "Part 1",
+                    "type":"problem_set",
+                    "title": "Part 1",
                     "tasks": [
                         {
                             "id": "3_2_1_1",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python program to develop a function that accepts a name as an argument then prints out a string like “{name} loves using the X1 remote!”",
                             "solution": "def text(name='Anyname'):\n    print( '\n %s' % name , 'loves using the X1 remote')\ntext('Adam')\ntext('Jake Sully')\ntext('Fiona')",
                             "inputs": [
@@ -273,6 +298,7 @@
                         },
                         {
                             "id": "3_2_1_2",
+                            "type":"problem_set_problem",
                             "prompt": "Write a function that takes in two arguments: state_name, city_name and an optional argument:  fav_sports_team. The function should print each value.",
                             "solution": "def game(State, City, Sports_team= None):\n    print('State: %s' %State.title())\n    print('City: %s' %City.title())\n    if Sports_team:\n        print('Sports_team: %s' %Sports_team)\ngame('PA', 'Pennsylvania', 'Eagles')",
                             "inputs": [
@@ -284,6 +310,7 @@
                         },
                         {
                             "id": "3_2_1_3",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python function to multiply all the numbers in a list.",
                             "solution": "import numpy as np\nmylist = [8, 2, 3, -1, 7]\n result = np.prod(np.array(mylist))\nresult\n",
                             "inputs": [
@@ -295,6 +322,7 @@
                         },
                         {
                             "id": "3_2_1_4",
+                            "type":"problem_set_problem",
                             "prompt": "Look at the python code below and explain what it is doing.\n\ndef test(a)\n   def add(b):\n       nonlocal a\n        a += 1\n        return a+b\n    return add\nfunc = test(4)\nprint(func(4))",
                             "solution": "This is a nested function code. Here it is defining 2 functions ‘test’ and ‘add’ . The inner function returns a value (a+b) whereas the outer function returns not the value but the func ‘add’. When we first call out the test(4) it essentially assigns the value 4 to a and returns the function add. Now when we go to the print like and call the func(4), here the add function gets activated assigning the value of 4 to b. The output of this function will be 9.",
                             "inputs": [],
@@ -302,6 +330,7 @@
                         },
                         {
                             "id": "3_2_1_5",
+                            "type":"problem_set_problem",
                             "prompt": "Write a python code to import a csv file and open it. Print the top 5 rows.",
                             "solution": "import csv\nwith open('some.csv', 'wb') as f:\n    writer = csv.writer(f)\n    writer.writerows(someiterable)",
                             "inputs": [],
@@ -309,6 +338,7 @@
                         },
                         {
                             "id": "3_2_1_6",
+                            "type":"problem_set_problem",
                             "prompt": "Export a csv file in your machine.",
                             "solution": "import csv\nwith open('some.csv', 'rb') as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print (row)",
                             "inputs": [],
@@ -316,6 +346,7 @@
                         },
                         {
                             "id": "3_2_1_7",
+                            "type":"problem_set_problem",
                             "prompt": "Write a python code to calculate the sum of the numbers from 1 to 100 using the lambda function. (hint- Use the range function range(1,101))",
                             "solution": "from functools import reduce\nreduce(lambda x, y: x+y, range(1,101))",
                             "inputs": [],
@@ -325,6 +356,7 @@
                         },
                         {
                             "id": "3_2_1_8",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python code to create a generator(given below) and we will use this generator to run the demographics dataset to identify customers in Denver. (The code below is not complete. Remember to use the next method to initiate the generator.",
                             "sub_prompts": [
                                 "\n def search(keyword, filename):\n     print('generator started')\n    f = open(filename, 'r')\n   # Looping through the file line by line\n   for line in f:\n        if keyword in line:\n           #if keyword found, return it\n          yield line\n    f.close()"
@@ -337,6 +369,7 @@
                         },
                         {
                             "id": "3_2_1_9",
+                            "type":"problem_set_problem",
                             "prompt": "Write a Python program to create a generator that creates a Fibonacci series.",
                             "solution": "def fibonacci(n):\n    # A generator for creating the Fibonacci numbers\n    a, b, counter = 0, 1, 0\n    while True:\n        if (counter > n):\n             return\n        yield a\n        a, b = b, a + b\n        counter += 1\nf = fibonacci(5)\nfor x in f:\n    print(x, ' ', end='') #\n print()",
                             "inputs": [],
