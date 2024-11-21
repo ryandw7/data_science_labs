@@ -1,80 +1,431 @@
 {
-    "Linux": [
+    "labs": [
         {
-            "has_children": false,
-            "title": "Simple File Commands",
-            "total": 14,
-            "best": 5
-        },
-        {
-            "has_children": false,
-            "title": "File Redirection and Pipes",
-            "total": 3,
-            "best": 0
-        },
-        {
-            "has_children": false,
-            "title": "Unix Meta-characters",
-            "total": 7,
-            "best": 0
-        },
-        {
-            "has_children": false,
-            "title": "Security",
-            "total": 11,
-            "best": 0
-        },
-        {
-            "has_children": false,
-            "title": "Other useful UNIX commands",
-            "total": 8,
-            "best": 0
-        },
-        {
-            "has_children": false,
-            "title": "Variables",
-            "total": 7,
-            "best": 0
-        }
-    ],
-    "Shell Scripting": [
-        {
-            "has_children": false,
-            "title": "Favorite Sport",
-            "status": "Not Completed"
-        },
-        {
-            "has_children": false,
-            "title": "Bash Counter",
-            "status": "Not Completed"
-        }
-    ],
-    "Python": [
-        {
-            "type": "problem_set_parent",
-            "id": 3,
-            "title": "Python Lab 1",
-            "has_children": true,
+            "id": "1",
+            "title": "Linux",
+            "has_children": "true",
             "children": [
                 {
-                    "title": "Part 1",
-                    "type": "problem_set"
+                    "has_children": false,
+                    "title": "Simple File Commands",
+                    "total": 14,
+                    "best": 5
                 },
                 {
-                    "title": "Part 2",
-                    "type": "problem_set"
+                    "has_children": false,
+                    "title": "File Redirection and Pipes",
+                    "total": 3,
+                    "best": 0
                 },
                 {
-                    "title": "Part 3",
-                    "type": "problem_set"
+                    "has_children": false,
+                    "title": "Unix Meta-characters",
+                    "total": 7,
+                    "best": 0
+                },
+                {
+                    "has_children": false,
+                    "title": "Security",
+                    "total": 11,
+                    "best": 0
+                },
+                {
+                    "has_children": false,
+                    "title": "Other useful UNIX commands",
+                    "total": 8,
+                    "best": 0
+                },
+                {
+                    "has_children": false,
+                    "title": "Variables",
+                    "total": 7,
+                    "best": 0
                 }
             ]
         },
         {
+            "id": 2,
+            "title": "Shell Scripting",
+            "has_children": true,
+            "children": [
+                {
+                    "id": "2_1",
+                    "type": "problem_set_problem",
+                    "has_children": false,
+                    "title": "Favorite Sport",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "2_2",
+                    "type": "problem_set_problem",
+                    "has_children": false,
+                    "title": "Bash Counter",
+                    "status": "Not Completed"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Python",
+            "has_children": true,
+            "children": [
+                {
+                    "type": "problem_set_parent",
+                    "id": "3_1",
+                    "title": "Lab 1",
+                    "has_children": true,
+                    "children": [
+                        {
+                            "id": "3_1_1",
+                            "title": "Part 1",
+                            "type": "problem_set",
+                            "has_children": true,
+                            "children": [
+                                {
+                                    "id":"3_1_1_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_1_2",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_1_3",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_1_4",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_1_5",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "3_1_2",
+                            "title": "Part 2",
+                            "type": "problem_set",
+                            "has_children": true,
+                            "children": [
+                                {
+                                    "id":"3_1_2_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_2_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_2_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_2_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id":"3_1_2_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "3_1_3",
+                            "type": "problem_set",
+                            "title": "Part 3",
+                            "has_children": true,
+                            "children": [
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "3_2",
+                    "title": "Lab 2",
+                    "has_children": true,
+                    "children": [
+                        {
+                            "id": "3_2_1",
+                            "type": "problem_set",
+                            "has_children": true,
+                            "children": [
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Statistics",
+            "has_children": "true",
+            "children": [
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed",
+                    "has_children": true,
+                    "children": [
+                        {
+                            "id": "",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        }
+                    ]
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed",
+                    "has_children": true,
+                    "children": [
+                        {
+                            "id": "",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "R Programming",
+            "total": 3,
+            "best": 0
+        },
+        {
+            "id": 6,
+            "title": "SQL",
             "type": "problem_set",
-            ""
+            "has_children": true,
+            "children": [
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Excel",
+            "type": "problem_set",
+            "has_children": true,
+            "children": [
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                },
+                {
+                    "id": "",
+                    "type": "problem_set_problem",
+                    "status": "Not Completed"
+                }
+            ]
         }
-    ],
-    "Statistics": [],
-    "R": []
+    ]
 }
