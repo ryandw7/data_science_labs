@@ -3,39 +3,46 @@
         {
             "id": "1",
             "title": "Linux",
-            "has_children": "true",
+            "type": "unit",
+            "has_children": true,
             "children": [
                 {
+                    "id": "3_1",
                     "has_children": false,
                     "title": "Simple File Commands",
                     "total": 14,
                     "best": 5
                 },
                 {
+                    "id": "3_2",
                     "has_children": false,
                     "title": "File Redirection and Pipes",
                     "total": 3,
                     "best": 0
                 },
                 {
+                    "id": "3_3",
                     "has_children": false,
                     "title": "Unix Meta-characters",
                     "total": 7,
                     "best": 0
                 },
                 {
+                    "id": "3_4",
                     "has_children": false,
                     "title": "Security",
                     "total": 11,
                     "best": 0
                 },
                 {
+                    "id": "3_5",
                     "has_children": false,
                     "title": "Other useful UNIX commands",
                     "total": 8,
                     "best": 0
                 },
                 {
+                    "id": "3_1",
                     "has_children": false,
                     "title": "Variables",
                     "total": 7,
@@ -44,8 +51,9 @@
             ]
         },
         {
-            "id": 2,
+            "id": "2",
             "title": "Shell Scripting",
+            "type": "unit",
             "has_children": true,
             "children": [
                 {
@@ -65,8 +73,9 @@
             ]
         },
         {
-            "id": 3,
+            "id": "3",
             "title": "Python",
+            "type": "unit",
             "has_children": true,
             "children": [
                 {
@@ -82,27 +91,27 @@
                             "has_children": true,
                             "children": [
                                 {
-                                    "id":"3_1_1_1",
+                                    "id": "3_1_1_1",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_1_2",
+                                    "id": "3_1_1_2",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_1_3",
+                                    "id": "3_1_1_3",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_1_4",
+                                    "id": "3_1_1_4",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_1_5",
+                                    "id": "3_1_1_5",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 }
@@ -115,27 +124,27 @@
                             "has_children": true,
                             "children": [
                                 {
-                                    "id":"3_1_2_1",
+                                    "id": "3_1_2_1",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_2_1",
+                                    "id": "3_1_2_2",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_2_1",
+                                    "id": "3_1_2_3",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_2_1",
+                                    "id": "3_1_2_4",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id":"3_1_2_1",
+                                    "id": "3_1_2_5",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 }
@@ -148,42 +157,42 @@
                             "has_children": true,
                             "children": [
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_1",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_2",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_3",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_4",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_5",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_6",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_7",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_1_3_8",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 }
@@ -194,6 +203,7 @@
                 {
                     "id": "3_2",
                     "title": "Lab 2",
+                    "type": "problem_set_parent",
                     "has_children": true,
                     "children": [
                         {
@@ -202,47 +212,47 @@
                             "has_children": true,
                             "children": [
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_1",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_2",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_3",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_4",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_5",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_6",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_7",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_8",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 },
                                 {
-                                    "id": "",
+                                    "id": "3_2_1_9",
                                     "type": "problem_set_problem",
                                     "status": "Not Completed"
                                 }
@@ -253,177 +263,198 @@
             ]
         },
         {
-            "id": 4,
+            "id": 5,
             "title": "Statistics",
+            "type": "unit",
             "has_children": "true",
             "children": [
                 {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed",
-                    "has_children": true,
                     "children": [
                         {
-                            "id": "",
+                            "id": "5_1_1",
                             "type": "problem_set_problem",
                             "status": "Not Completed"
                         },
                         {
-                            "id": "",
+                            "id": "5_1_2",
                             "type": "problem_set_problem",
                             "status": "Not Completed"
                         },
                         {
-                            "id": "",
-                            "type": "problem_set_problem",
-                            "status": "Not Completed"
-                        }
-                    ]
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed",
-                    "has_children": true,
-                    "children": [
-                        {
-                            "id": "",
+                            "id": "5_1_3",
                             "type": "problem_set_problem",
                             "status": "Not Completed"
                         },
                         {
-                            "id": "",
+                            "id": "5_1_4",
                             "type": "problem_set_problem",
-                            "status": "Not Completed"
+                            "status": "Not Completed",
+                            "has_children": true,
+                            "children": [
+                                {
+                                    "id": "5_1_4_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "5_1_4_2",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "5_1_4_3",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                }
+                            ]
                         },
                         {
-                            "id": "",
+                            "id": "5_1_5",
                             "type": "problem_set_problem",
-                            "status": "Not Completed"
-                        },
-                        {
-                            "id": "",
-                            "type": "problem_set_problem",
-                            "status": "Not Completed"
+                            "status": "Not Completed",
+                            "has_children": true,
+                            "children": [
+                                {
+                                    "id": "5_1_5_1",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "5_1_5_2",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "5_1_5_3",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                },
+                                {
+                                    "id": "5_1_5_4",
+                                    "type": "problem_set_problem",
+                                    "status": "Not Completed"
+                                }
+                            ]
                         }
                     ]
                 }
             ]
-        },
-        {
-            "id": 5,
-            "title": "R Programming",
-            "total": 3,
-            "best": 0
         },
         {
             "id": 6,
+            "title": "R Programming",
+            "total": 4,
+            "best": 1
+        },
+        {
+            "id": 7,
             "title": "SQL",
-            "type": "problem_set",
+            "type": "unit",
             "has_children": true,
             "children": [
                 {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
+                    "id": "7_1",
+                    "title": "SQL Labs",
+                    "type": "problem_set",
+                    "has_children": true,
+                    "children": [
+                        {
+                            "id": "7_1_1",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_1",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_3",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_4",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_5",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_6",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_7",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_8",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_9",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "7_1_10",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        }
+                    ]
                 }
             ]
         },
         {
-            "id": 7,
+            "id": 8,
             "title": "Excel",
-            "type": "problem_set",
+            "type": "unit",
             "has_children": true,
             "children": [
                 {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
-                },
-                {
-                    "id": "",
-                    "type": "problem_set_problem",
-                    "status": "Not Completed"
+                    "id": "8_1",
+                    "title": "Excel Labs",
+                    "type": "problem_set",
+                    "has_children": "true",
+                    "children": [
+                        {
+                            "id": "8_1_1",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "8_1_2",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "8_1_3",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "8_1_4",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "8_1_5",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        },
+                        {
+                            "id": "8_1_6",
+                            "type": "problem_set_problem",
+                            "status": "Not Completed"
+                        }
+                    ]
                 }
             ]
         }

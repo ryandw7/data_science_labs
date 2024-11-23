@@ -72,3 +72,21 @@ def mark_completed(topic, subtopic):
                 with open('./lab_data/user_scores.json', 'w') as f:
                     json.dump(data, f, indent=4)
 
+
+def grab_score_by_id(id):
+    did = id.split("_")
+    
+    with open('./lab_data/user_scores.json', 'r') as f:
+        data = json.load(f)['labs']
+        for id_seg in range(len(did)):
+            for i in data:
+                new_seg = "_".join(did[0: id_seg + 1])
+                print(new_seg)
+                if i['id'] == new_seg:
+                    data = i["children"]
+                    break
+            
+    print(data)    
+    return(data)
+
+grab_score_by_id("3_1_1")
