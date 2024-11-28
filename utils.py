@@ -1,6 +1,6 @@
 import os
 import json
-
+import time
 def read_all_scores():
     os.system("clear")
     with open('./lab_data/user_scores.json', 'r', encoding="latin-1") as f:
@@ -73,7 +73,7 @@ def mark_completed(topic, subtopic):
                     json.dump(data, f, indent=4)
 
 
-def grab_score_by_id(id):
+def old_grab_score_by_id(id):
     did = id.split("_")
     
     with open('./lab_data/user_scores.json', 'r') as f:
@@ -81,12 +81,66 @@ def grab_score_by_id(id):
         for id_seg in range(len(did)):
             for i in data:
                 new_seg = "_".join(did[0: id_seg + 1])
-                print(new_seg)
-                if i['id'] == new_seg:
+               
+                if i['id'] == new_seg and 'children' in i:
                     data = i["children"]
+                    break
+                elif i['id'] == new_seg and 'children' not in i:
+                    data = i
                     break
             
     print(data)    
     return(data)
+def grab_score_by_id(id):
+    did = id.split("_")
+    
+    with open('./lab_data/user_scores.json', 'r') as f:
+        data = json.load(f)['labs']
+        for id_seg in range(len(did)):
+            
+            new_seg = "_".join(did[0: id_seg + 1])
+            data = next((item for item in data if item['id'] == new_seg), None)
 
-grab_score_by_id("3_1_1")
+            if data is None:
+                print(f"No match found for segment: {new_seg}")
+                return None
+            
+            if 'children' in data:
+                data = data['children']
+        
+    print(data)    
+    return(data)
+
+def toggle_completed_by_id(id, completed=bool):
+    with open('./lab_data/user_scores.json', 'r') as f:
+
+        did = id.split("_")
+
+        data = json.load(f)
+        data_chunk = data['labs']
+        for id_seg in range(len(did)):
+            
+            new_seg = "_".join(did[0: id_seg + 1])
+            data_chunk = next((item for item in data_chunk if item['id'] == new_seg), None)
+
+            if data_chunk is None:
+                print(f"No match found for segment: {new_seg}")
+                return None
+            
+            if 'children' in data_chunk:
+                data_chunk = data_chunk['children']
+
+        if completed == True:
+            data_chunk['status'] = "Completed"
+        else:
+             data_chunk['status'] = "Not Completed"
+       
+            
+        with open('./lab_data/user_scores.json', 'w') as f:
+            json.dump(data, f, indent=4)
+        print(data_chunk)    
+        f.close()
+        return(data)
+    
+
+toggle_completed_by_id("3_1_1_1", completed=False)
